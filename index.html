@@ -1,190 +1,403 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CumplePatagonia | Cumpleaños y librería en Punta Arenas</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CumplePatagonia | Cumpleaños, cotillón y librería en Punta Arenas</title>
+
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
       font-family: Arial, sans-serif;
-      background: #fff7fb;
+      background: #f8f8fb;
       color: #222;
     }
+
     header {
-      background: linear-gradient(135deg, #ff4fa3, #7c4dff);
-      color: white;
-      padding: 28px 18px;
-      text-align: center;
+      background: #ffffff;
+      padding: 16px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 3px 18px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
-    header h1 { font-size: 34px; margin-bottom: 8px; }
-    header p { font-size: 17px; }
+
+    .logo {
+      font-size: 26px;
+      font-weight: 900;
+      color: #e91e63;
+    }
+
+    .logo span {
+      color: #5b2cff;
+    }
+
+    nav a {
+      margin-left: 18px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      font-size: 14px;
+    }
 
     .hero {
-      padding: 30px 18px;
-      text-align: center;
-      background: white;
-    }
-    .hero h2 {
-      font-size: 28px;
-      margin-bottom: 12px;
-      color: #ff2f92;
-    }
-    .hero p {
-      max-width: 680px;
-      margin: auto;
-      font-size: 17px;
-      line-height: 1.5;
-    }
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 14px 22px;
-      background: #25d366;
-      color: white;
-      text-decoration: none;
-      border-radius: 999px;
-      font-weight: bold;
+      min-height: 520px;
+      padding: 70px 6%;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 35px;
+      align-items: center;
+      background: linear-gradient(135deg, #fff0f7, #eef2ff);
     }
 
-    .section {
-      padding: 32px 18px;
-      max-width: 1100px;
-      margin: auto;
+    .hero h1 {
+      font-size: 48px;
+      line-height: 1.05;
+      margin-bottom: 18px;
+      color: #1f1f1f;
     }
-    .section h2 {
-      text-align: center;
+
+    .hero h1 span {
+      color: #e91e63;
+    }
+
+    .hero p {
+      font-size: 19px;
+      line-height: 1.5;
       margin-bottom: 24px;
-      color: #333;
+      color: #444;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #25d366;
+      color: white;
+      padding: 15px 24px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 900;
+      box-shadow: 0 10px 25px rgba(37,211,102,0.35);
+    }
+
+    .hero-card {
+      background: white;
+      border-radius: 30px;
+      padding: 28px;
+      box-shadow: 0 20px 55px rgba(0,0,0,0.12);
+    }
+
+    .hero-card img {
+      width: 100%;
+      border-radius: 22px;
+      display: block;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #ffe0ef;
+      color: #e91e63;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-weight: bold;
+      margin-bottom: 14px;
+    }
+
+    section {
+      padding: 55px 6%;
+    }
+
+    .title {
+      text-align: center;
+      font-size: 34px;
+      margin-bottom: 12px;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #666;
+      margin-bottom: 35px;
+      font-size: 17px;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-      gap: 18px;
-    }
-    .card {
-      background: white;
-      border-radius: 18px;
-      padding: 18px;
-      box-shadow: 0 8px 22px rgba(0,0,0,0.08);
-      text-align: center;
-    }
-    .emoji {
-      font-size: 46px;
-      margin-bottom: 10px;
-    }
-    .card h3 {
-      margin-bottom: 8px;
-      color: #7c4dff;
-    }
-    .price {
-      font-size: 22px;
-      font-weight: bold;
-      color: #ff2f92;
-      margin-top: 10px;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 22px;
     }
 
-    .highlight {
-      background: #ffe7f3;
-      border-radius: 22px;
-      padding: 24px;
+    .card {
+      background: white;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+      transition: 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .card-img {
+      height: 160px;
+      background: linear-gradient(135deg, #ff8ac4, #7c4dff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 64px;
+    }
+
+    .card-body {
+      padding: 20px;
+    }
+
+    .card h3 {
+      margin-bottom: 8px;
+      color: #222;
+    }
+
+    .card p {
+      color: #666;
+      line-height: 1.4;
+      font-size: 15px;
+    }
+
+    .price {
+      margin-top: 14px;
+      font-size: 22px;
+      font-weight: 900;
+      color: #e91e63;
+    }
+
+    .old-price {
+      text-decoration: line-through;
+      color: #999;
+      font-size: 14px;
+      margin-left: 6px;
+    }
+
+    .strip {
+      background: #1f1f1f;
+      color: white;
       text-align: center;
-      margin-top: 20px;
+      padding: 30px 6%;
+      font-size: 22px;
+      font-weight: 900;
+    }
+
+    .delivery {
+      background: white;
+      border-radius: 28px;
+      padding: 32px;
+      max-width: 1000px;
+      margin: auto;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .delivery h2 {
+      font-size: 32px;
+      margin-bottom: 12px;
+      color: #5b2cff;
     }
 
     footer {
-      background: #222;
+      background: #151515;
       color: white;
+      padding: 35px 6%;
       text-align: center;
-      padding: 22px;
-      margin-top: 30px;
+    }
+
+    .whatsapp {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      background: #25d366;
+      color: white;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      text-decoration: none;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.25);
+      z-index: 20;
+    }
+
+    @media (max-width: 800px) {
+      nav { display: none; }
+
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 45px 6%;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
     }
   </style>
 </head>
+
 <body>
 
 <header>
-  <h1>🎉 CumplePatagonia</h1>
-  <p>Cumpleaños, cotillón y librería en Punta Arenas</p>
+  <div class="logo">Cumple<span>Patagonia</span></div>
+  <nav>
+    <a href="#categorias">Categorías</a>
+    <a href="#packs">Packs</a>
+    <a href="#libreria">Librería</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
 </header>
 
 <section class="hero">
-  <h2>Todo para tu celebración, sin pagar de más</h2>
-  <p>
-    En CumplePatagonia encuentras artículos de cumpleaños, bandejas,
-    globos, cotillón, bolsitas sorpresa y productos de librería con
-    entrega local en Punta Arenas.
-  </p>
-  <a class="btn" href="https://wa.me/56912345678?text=Hola%20CumplePatagonia,%20quiero%20hacer%20un%20pedido">
-    Pedir por WhatsApp
-  </a>
+  <div>
+    <div class="badge">Entrega local en Punta Arenas</div>
+    <h1>Todo para tu <span>cumpleaños</span> sin pagar de más</h1>
+    <p>
+      Artículos de cumpleaños, cotillón, globos, decoración, bandejas,
+      bolsitas sorpresa y productos de librería. Compra fácil por WhatsApp
+      y recibe en Punta Arenas.
+    </p>
+    <a class="btn" href="https://wa.me/56912345678?text=Hola%20CumplePatagonia,%20quiero%20hacer%20un%20pedido">
+      Comprar por WhatsApp
+    </a>
+  </div>
+
+  <div class="hero-card">
+    <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=900&q=80" alt="Cumpleaños con globos y decoración">
+  </div>
 </section>
 
-<section class="section">
-  <h2>Categorías principales</h2>
+<div class="strip">
+  🎉 Packs listos para cumpleaños, colegios y celebraciones familiares
+</div>
+
+<section id="categorias">
+  <h2 class="title">Categorías principales</h2>
+  <p class="subtitle">Productos pensados para comprar rápido y no recorrer todo Punta Arenas.</p>
+
   <div class="grid">
     <div class="card">
-      <div class="emoji">🎂</div>
-      <h3>Cumpleaños</h3>
-      <p>Platos, vasos, servilletas, velas y decoración.</p>
+      <div class="card-img">🎂</div>
+      <div class="card-body">
+        <h3>Cumpleaños</h3>
+        <p>Platos, vasos, velas, manteles, bandejas, servilletas y decoración temática.</p>
+      </div>
     </div>
 
     <div class="card">
-      <div class="emoji">🎈</div>
-      <h3>Globos y cotillón</h3>
-      <p>Globos, guirnaldas, gorros, serpentinas y piñatas.</p>
+      <div class="card-img">🎈</div>
+      <div class="card-body">
+        <h3>Globos y decoración</h3>
+        <p>Globos, guirnaldas, fondos, números, letras y decoración para mesas.</p>
+      </div>
     </div>
 
     <div class="card">
-      <div class="emoji">🍬</div>
-      <h3>Bolsitas sorpresa</h3>
-      <p>Dulces, sorpresas y packs para niños.</p>
+      <div class="card-img">🍬</div>
+      <div class="card-body">
+        <h3>Dulces y sorpresas</h3>
+        <p>Bolsitas sorpresa, dulces, chocolates, relleno de piñata y premios para niños.</p>
+      </div>
     </div>
 
     <div class="card">
-      <div class="emoji">📚</div>
-      <h3>Librería</h3>
-      <p>Cuadernos, lápices, cartulinas, pegamentos y útiles escolares.</p>
+      <div class="card-img">📚</div>
+      <div class="card-body">
+        <h3>Librería</h3>
+        <p>Cuadernos, lápices, cartulinas, pegamento, goma eva y útiles escolares.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="section">
-  <h2>Packs destacados</h2>
+<section id="packs">
+  <h2 class="title">Packs destacados</h2>
+  <p class="subtitle">Precios referenciales. Se pueden ajustar según cantidad y temática.</p>
+
   <div class="grid">
     <div class="card">
-      <div class="emoji">🥳</div>
-      <h3>Pack Cumple 10 niños</h3>
-      <p>Ideal para cumpleaños pequeños en casa o colegio.</p>
-      <div class="price">Desde $19.990</div>
+      <div class="card-img">🥳</div>
+      <div class="card-body">
+        <h3>Pack Cumple 10 niños</h3>
+        <p>Vasos, platos, servilletas, bolsitas y decoración básica.</p>
+        <div class="price">$19.990</div>
+      </div>
     </div>
 
     <div class="card">
-      <div class="emoji">🎁</div>
-      <h3>Pack Cumple 20 niños</h3>
-      <p>Incluye artículos básicos para una celebración completa.</p>
-      <div class="price">Desde $34.990</div>
+      <div class="card-img">🎁</div>
+      <div class="card-body">
+        <h3>Pack Cumple 20 niños</h3>
+        <p>Ideal para celebraciones en casa, sala de eventos o colegio.</p>
+        <div class="price">$34.990</div>
+      </div>
     </div>
 
     <div class="card">
-      <div class="emoji">🏫</div>
-      <h3>Pack Escolar Rápido</h3>
-      <p>Materiales de librería para tareas y trabajos escolares.</p>
-      <div class="price">Desde $9.990</div>
+      <div class="card-img">🎊</div>
+      <div class="card-body">
+        <h3>Pack Decoración Mesa</h3>
+        <p>Mantel, bandejas, vasos, platos y elementos decorativos.</p>
+        <div class="price">$14.990 <span class="old-price">$19.990</span></div>
+      </div>
     </div>
   </div>
+</section>
 
-  <div class="highlight">
-    <h2>🚚 Entrega en Punta Arenas</h2>
-    <p>Compra por WhatsApp, paga por transferencia y recibe en tu casa.</p>
+<section id="libreria">
+  <h2 class="title">Librería rápida</h2>
+  <p class="subtitle">Para tareas, trabajos del colegio y compras de último minuto.</p>
+
+  <div class="grid">
+    <div class="card">
+      <div class="card-img">✏️</div>
+      <div class="card-body">
+        <h3>Pack Tarea Escolar</h3>
+        <p>Cartulina, pegamento, lápices, tijera y materiales básicos.</p>
+        <div class="price">Desde $9.990</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img">🖍️</div>
+      <div class="card-body">
+        <h3>Material creativo</h3>
+        <p>Goma eva, témperas, plumones, stickers y papeles de colores.</p>
+        <div class="price">Consultar</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contacto">
+  <div class="delivery">
+    <h2>🚚 Despacho en Punta Arenas</h2>
+    <p>
+      Haz tu pedido por WhatsApp, confirma disponibilidad y coordina retiro o despacho.
+      Atención especial para cumpleaños, colegios, jardines infantiles y eventos familiares.
+    </p>
+    <br>
+    <a class="btn" href="https://wa.me/56912345678?text=Hola%20CumplePatagonia,%20necesito%20cotizar%20articulos%20de%20cumpleaños">
+      Cotizar ahora
+    </a>
   </div>
 </section>
 
 <footer>
-  <p>© 2026 CumplePatagonia</p>
-  <p>Punta Arenas, Chile</p>
+  <p><strong>CumplePatagonia</strong></p>
+  <p>Cumpleaños · Cotillón · Librería · Punta Arenas</p>
+  <p>© 2026 Todos los derechos reservados</p>
 </footer>
+
+<a class="whatsapp" href="https://wa.me/56912345678?text=Hola%20CumplePatagonia,%20quiero%20comprar">💬</a>
 
 </body>
 </html>
