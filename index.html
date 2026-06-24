@@ -17,42 +17,67 @@
 
     .top-banner {
       width: 100%;
-      height: 230px;
+      height: 170px;
       background-image: url("assets/banner-magallanes.jpg");
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
-      position: relative;
     }
 
     .menu-bar {
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      padding: 18px 6%;
+      width: 96%;
+      min-height: 84px;
+      margin: -6px auto 0 auto;
+      padding: 12px 26px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: rgba(255,255,255,0.90);
-      backdrop-filter: blur(4px);
-      box-shadow: 0 3px 18px rgba(0,0,0,0.08);
+      background: rgba(255,255,255,0.96);
+      border-radius: 16px;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+      position: relative;
+      z-index: 5;
     }
 
     .logo {
-      font-size: 34px;
+      font-size: 30px;
       font-weight: 900;
       color: #e91e63;
+      line-height: 1;
     }
 
     .logo span { color: #5b2cff; }
 
-    nav a {
-      margin-left: 26px;
+    .logo-icons {
+      display: block;
+      font-size: 20px;
+      margin-bottom: 3px;
+      letter-spacing: 5px;
+      color: #5b2cff;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+    }
+
+    .nav-menu a {
       text-decoration: none;
       color: #222;
       font-weight: 800;
-      font-size: 15px;
+      font-size: 12px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      min-width: 70px;
+    }
+
+    .nav-menu a span {
+      font-size: 19px;
+      color: #5b2cff;
     }
 
     .hero {
@@ -228,27 +253,42 @@
       z-index: 20;
     }
 
-    @media (max-width: 800px) {
-      .top-banner { height: 190px; }
+    @media (max-width: 900px) {
+      .top-banner {
+        height: 145px;
+      }
 
       .menu-bar {
+        width: 94%;
         flex-direction: column;
-        gap: 10px;
-        padding: 14px 5%;
+        gap: 14px;
+        padding: 14px;
       }
 
-      .logo { font-size: 26px; }
+      .logo {
+        font-size: 25px;
+        text-align: center;
+      }
 
-      nav {
-        display: flex;
-        flex-wrap: wrap;
+      .logo-icons {
+        font-size: 16px;
+        letter-spacing: 3px;
+      }
+
+      .nav-menu {
+        width: 100%;
         justify-content: center;
-        gap: 10px;
+        flex-wrap: wrap;
+        gap: 14px;
       }
 
-      nav a {
-        margin-left: 0;
-        font-size: 13px;
+      .nav-menu a {
+        font-size: 11px;
+        min-width: 68px;
+      }
+
+      .nav-menu a span {
+        font-size: 17px;
       }
 
       .hero {
@@ -256,24 +296,31 @@
         padding: 45px 6%;
       }
 
-      .hero h1 { font-size: 36px; }
+      .hero h1 {
+        font-size: 36px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-<header class="top-banner">
-  <div class="menu-bar">
-    <div class="logo">Cumple<span>Patagonia</span></div>
+<header>
+  <div class="top-banner"></div>
 
-    <nav>
-      <a href="cumpleanos/">Cumpleaños</a>
-      <a href="globos/">Globos</a>
-      <a href="dulces/">Dulces</a>
-      <a href="libreria/">Librería</a>
-      <a href="packs/">Packs</a>
-      <a href="contacto/">Contacto</a>
+  <div class="menu-bar">
+    <div class="logo">
+      <span class="logo-icons">🎈🎂🎉</span>
+      Cumple<span>Patagonia</span>
+    </div>
+
+    <nav class="nav-menu">
+      <a href="cumpleanos/"><span>🎉</span>Cumpleaños</a>
+      <a href="globos/"><span>🎈</span>Globos</a>
+      <a href="dulces/"><span>🍬</span>Dulces</a>
+      <a href="libreria/"><span>📖</span>Librería</a>
+      <a href="packs/"><span>🎁</span>Packs</a>
+      <a href="contacto/"><span>💬</span>Contacto</a>
     </nav>
   </div>
 </header>
