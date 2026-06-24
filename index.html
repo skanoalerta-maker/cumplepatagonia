@@ -3,9 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>CumplePatagonia | Cumpleaños, cotillón y librería en Punta Arenas</title>
-
   <link rel="icon" href="assets/favicon.png">
 
   <style>
@@ -17,34 +15,44 @@
       color: #222;
     }
 
-    header {
-      background: #ffffff;
-      padding: 16px 6%;
+    .top-banner {
+      width: 100%;
+      height: 230px;
+      background-image: url("assets/banner-magallanes.jpg");
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+
+    .menu-bar {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      padding: 18px 6%;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      background: rgba(255,255,255,0.90);
+      backdrop-filter: blur(4px);
       box-shadow: 0 3px 18px rgba(0,0,0,0.08);
-      position: sticky;
-      top: 0;
-      z-index: 10;
     }
 
     .logo {
-      font-size: 26px;
+      font-size: 34px;
       font-weight: 900;
       color: #e91e63;
     }
 
-    .logo span {
-      color: #5b2cff;
-    }
+    .logo span { color: #5b2cff; }
 
     nav a {
-      margin-left: 18px;
+      margin-left: 26px;
       text-decoration: none;
-      color: #333;
-      font-weight: bold;
-      font-size: 14px;
+      color: #222;
+      font-weight: 800;
+      font-size: 15px;
     }
 
     .hero {
@@ -64,9 +72,7 @@
       color: #1f1f1f;
     }
 
-    .hero h1 span {
-      color: #e91e63;
-    }
+    .hero h1 span { color: #e91e63; }
 
     .hero p {
       font-size: 19px;
@@ -109,9 +115,7 @@
       margin-bottom: 14px;
     }
 
-    section {
-      padding: 55px 6%;
-    }
+    section { padding: 55px 6%; }
 
     .title {
       text-align: center;
@@ -140,10 +144,6 @@
       transition: 0.2s;
     }
 
-    .card:hover {
-      transform: translateY(-4px);
-    }
-
     .category-link {
       text-decoration: none;
       color: inherit;
@@ -165,9 +165,7 @@
       font-size: 64px;
     }
 
-    .card-body {
-      padding: 20px;
-    }
+    .card-body { padding: 20px; }
 
     .card h3 {
       margin-bottom: 8px;
@@ -231,10 +229,15 @@
     }
 
     @media (max-width: 800px) {
-      header {
+      .top-banner { height: 190px; }
+
+      .menu-bar {
         flex-direction: column;
-        gap: 12px;
+        gap: 10px;
+        padding: 14px 5%;
       }
+
+      .logo { font-size: 26px; }
 
       nav {
         display: flex;
@@ -245,6 +248,7 @@
 
       nav a {
         margin-left: 0;
+        font-size: 13px;
       }
 
       .hero {
@@ -252,94 +256,44 @@
         padding: 45px 6%;
       }
 
-      .hero h1 {
-        font-size: 36px;
-      }
-      .top-banner{
-    width:100%;
-    height:220px;
-
-    background-image:url("assets/banner-magallanes.jpg");
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-
-    position:relative;
-}
-
-.menu-bar{
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
-    padding:25px 6%;
-
-    background:rgba(255,255,255,0.90);
-    backdrop-filter:blur(4px);
-}
-
-.logo{
-    font-size:42px;
-    font-weight:900;
-    color:#ff2f7f;
-}
-
-.logo span{
-    color:#5b2cff;
-}
-
-.menu-bar nav a{
-    margin-left:30px;
-    text-decoration:none;
-    color:#222;
-    font-weight:700;
-}
+      .hero h1 { font-size: 36px; }
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  <div class="logo">Cumple<span>Patagonia</span></div>
+<header class="top-banner">
+  <div class="menu-bar">
+    <div class="logo">Cumple<span>Patagonia</span></div>
 
-  <nav>
-    <a href="cumpleanos/">Cumpleaños</a>
-    <a href="globos/">Globos</a>
-    <a href="dulces/">Dulces</a>
-    <a href="libreria/">Librería</a>
-    <a href="packs/">Packs</a>
-    <a href="contacto/">Contacto</a>
-  </nav>
+    <nav>
+      <a href="cumpleanos/">Cumpleaños</a>
+      <a href="globos/">Globos</a>
+      <a href="dulces/">Dulces</a>
+      <a href="libreria/">Librería</a>
+      <a href="packs/">Packs</a>
+      <a href="contacto/">Contacto</a>
+    </nav>
+  </div>
 </header>
 
 <section class="hero">
   <div>
     <div class="badge">Entrega local en Punta Arenas</div>
-
     <h1>Todo para tu <span>cumpleaños</span> sin pagar de más</h1>
-
     <p>
       Artículos de cumpleaños, cotillón, globos, decoración, bandejas,
       bolsitas sorpresa y productos de librería. Compra fácil por WhatsApp
       y recibe en Punta Arenas.
     </p>
-
     <a class="btn" href="https://wa.me/56912345678?text=Hola%20CumplePatagonia,%20quiero%20hacer%20un%20pedido">
       Comprar por WhatsApp
     </a>
   </div>
 
   <div class="hero-card">
-    <img
-      src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=900&q=80"
-      alt="Cumpleaños con globos y decoración"
-    >
+    <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=900&q=80" alt="Cumpleaños con globos y decoración">
   </div>
 </section>
 
@@ -352,7 +306,6 @@
   <p class="subtitle">Elige una categoría y revisa el catálogo disponible en Punta Arenas.</p>
 
   <div class="grid">
-
     <a href="cumpleanos/" class="card category-link">
       <div class="card-img">🎂</div>
       <div class="card-body">
@@ -392,7 +345,6 @@
         <p>Packs de cumpleaños, decoración de mesa, escolares y celebraciones rápidas.</p>
       </div>
     </a>
-
   </div>
 </section>
 
