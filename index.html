@@ -141,6 +141,18 @@
       transform: translateY(-4px);
     }
 
+    .category-link {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      cursor: pointer;
+    }
+
+    .category-link:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 42px rgba(0,0,0,.14);
+    }
+
     .card-img {
       height: 160px;
       background: linear-gradient(135deg, #ff8ac4, #7c4dff);
@@ -163,20 +175,6 @@
       color: #666;
       line-height: 1.4;
       font-size: 15px;
-    }
-
-    .price {
-      margin-top: 14px;
-      font-size: 22px;
-      font-weight: 900;
-      color: #e91e63;
-    }
-
-    .old-price {
-      text-decoration: line-through;
-      color: #999;
-      font-size: 14px;
-      margin-left: 6px;
     }
 
     .strip {
@@ -228,18 +226,23 @@
       box-shadow: 0 10px 28px rgba(0,0,0,0.25);
       z-index: 20;
     }
-.category-link{
-  text-decoration:none;
-  color:inherit;
-  display:block;
-}
 
-.category-link:hover{
-  transform:translateY(-6px);
-  box-shadow:0 18px 42px rgba(0,0,0,.14);
-}
     @media (max-width: 800px) {
-      nav { display: none; }
+      header {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      nav a {
+        margin-left: 0;
+      }
 
       .hero {
         grid-template-columns: 1fr;
@@ -257,32 +260,39 @@
 
 <header>
   <div class="logo">Cumple<span>Patagonia</span></div>
-<nav>
-  <a href="cumpleanos/">Cumpleaños</a>
-  <a href="globos/">Globos</a>
-  <a href="dulces/">Dulces</a>
-  <a href="libreria/">Librería</a>
-  <a href="packs/">Packs</a>
-  <a href="contacto/">Contacto</a>
-</nav>
+
+  <nav>
+    <a href="cumpleanos/">Cumpleaños</a>
+    <a href="globos/">Globos</a>
+    <a href="dulces/">Dulces</a>
+    <a href="libreria/">Librería</a>
+    <a href="packs/">Packs</a>
+    <a href="contacto/">Contacto</a>
+  </nav>
 </header>
 
 <section class="hero">
   <div>
     <div class="badge">Entrega local en Punta Arenas</div>
+
     <h1>Todo para tu <span>cumpleaños</span> sin pagar de más</h1>
+
     <p>
       Artículos de cumpleaños, cotillón, globos, decoración, bandejas,
       bolsitas sorpresa y productos de librería. Compra fácil por WhatsApp
       y recibe en Punta Arenas.
     </p>
+
     <a class="btn" href="https://wa.me/56912345678?text=Hola%20CumplePatagonia,%20quiero%20hacer%20un%20pedido">
       Comprar por WhatsApp
     </a>
   </div>
 
   <div class="hero-card">
-    <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=900&q=80" alt="Cumpleaños con globos y decoración">
+    <img
+      src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=900&q=80"
+      alt="Cumpleaños con globos y decoración"
+    >
   </div>
 </section>
 
@@ -292,99 +302,50 @@
 
 <section id="categorias">
   <h2 class="title">Categorías principales</h2>
-  <p class="subtitle">Productos pensados para comprar rápido y no recorrer todo Punta Arenas.</p>
+  <p class="subtitle">Elige una categoría y revisa el catálogo disponible en Punta Arenas.</p>
 
   <div class="grid">
-    <div class="card">
+
+    <a href="cumpleanos/" class="card category-link">
       <div class="card-img">🎂</div>
       <div class="card-body">
         <h3>Cumpleaños</h3>
         <p>Platos, vasos, velas, manteles, bandejas, servilletas y decoración temática.</p>
       </div>
-    </div>
+    </a>
 
-    <div class="card">
+    <a href="globos/" class="card category-link">
       <div class="card-img">🎈</div>
       <div class="card-body">
         <h3>Globos y decoración</h3>
         <p>Globos, guirnaldas, fondos, números, letras y decoración para mesas.</p>
       </div>
-    </div>
+    </a>
 
-    <div class="card">
+    <a href="dulces/" class="card category-link">
       <div class="card-img">🍬</div>
       <div class="card-body">
         <h3>Dulces y sorpresas</h3>
         <p>Bolsitas sorpresa, dulces, chocolates, relleno de piñata y premios para niños.</p>
       </div>
-    </div>
+    </a>
 
-    <div class="card">
+    <a href="libreria/" class="card category-link">
       <div class="card-img">📚</div>
       <div class="card-body">
         <h3>Librería</h3>
         <p>Cuadernos, lápices, cartulinas, pegamento, goma eva y útiles escolares.</p>
       </div>
-    </div>
-  </div>
-</section>
+    </a>
 
-<section id="packs">
-  <h2 class="title">Packs destacados</h2>
-  <p class="subtitle">Precios referenciales. Se pueden ajustar según cantidad y temática.</p>
-
-  <div class="grid">
-    <div class="card">
-      <div class="card-img">🥳</div>
-      <div class="card-body">
-        <h3>Pack Cumple 10 niños</h3>
-        <p>Vasos, platos, servilletas, bolsitas y decoración básica.</p>
-        <div class="price">$19.990</div>
-      </div>
-    </div>
-
-    <div class="card">
+    <a href="packs/" class="card category-link">
       <div class="card-img">🎁</div>
       <div class="card-body">
-        <h3>Pack Cumple 20 niños</h3>
-        <p>Ideal para celebraciones en casa, sala de eventos o colegio.</p>
-        <div class="price">$34.990</div>
+        <h3>Packs armados</h3>
+        <p>Packs de cumpleaños, decoración de mesa, escolares y celebraciones rápidas.</p>
       </div>
-    </div>
+    </a>
 
-    <div class="card">
-      <div class="card-img">🎊</div>
-      <div class="card-body">
-        <h3>Pack Decoración Mesa</h3>
-        <p>Mantel, bandejas, vasos, platos y elementos decorativos.</p>
-        <div class="price">$14.990 <span class="old-price">$19.990</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="libreria">
-  <h2 class="title">Librería rápida</h2>
-  <p class="subtitle">Para tareas, trabajos del colegio y compras de último minuto.</p>
-
-  <div class="grid">
-    <div class="card">
-      <div class="card-img">✏️</div>
-      <div class="card-body">
-        <h3>Pack Tarea Escolar</h3>
-        <p>Cartulina, pegamento, lápices, tijera y materiales básicos.</p>
-        <div class="price">Desde $9.990</div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-img">🖍️</div>
-      <div class="card-body">
-        <h3>Material creativo</h3>
-        <p>Goma eva, témperas, plumones, stickers y papeles de colores.</p>
-        <div class="price">Consultar</div>
-      </div>
-    </div>
   </div>
 </section>
 
