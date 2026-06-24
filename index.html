@@ -12,12 +12,12 @@
     body {
       font-family: Arial, sans-serif;
       background: #f8f8fb;
-      color: #222;
+      color: #20202a;
     }
 
     .top-banner {
       width: 100%;
-      height: 170px;
+      height: 150px;
       background-image: url("assets/banner-magallanes.jpg");
       background-size: cover;
       background-position: center center;
@@ -26,126 +26,214 @@
 
     .menu-bar {
       width: 96%;
-      min-height: 84px;
-      margin: -6px auto 0 auto;
-      padding: 12px 26px;
+      min-height: 118px;
+      margin: -118px auto 26px auto;
+      padding: 18px 38px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: rgba(255,255,255,0.96);
-      border-radius: 16px;
-      box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+      background: rgba(255,255,255,0.97);
+      border-radius: 26px;
+      box-shadow: 0 18px 45px rgba(80, 52, 255, 0.20);
       position: relative;
       z-index: 5;
     }
 
     .logo {
-      font-size: 30px;
+      font-size: 42px;
       font-weight: 900;
-      color: #e91e63;
+      color: #f00667;
       line-height: 1;
+      white-space: nowrap;
     }
 
-    .logo span { color: #5b2cff; }
+    .logo span { color: #4f18df; }
 
     .logo-icons {
       display: block;
-      font-size: 20px;
-      margin-bottom: 3px;
-      letter-spacing: 5px;
-      color: #5b2cff;
+      font-size: 30px;
+      margin-bottom: 8px;
+      letter-spacing: 12px;
     }
 
     .nav-menu {
       display: flex;
       align-items: center;
-      gap: 26px;
     }
 
     .nav-menu a {
+      min-width: 135px;
+      min-height: 72px;
+      padding: 0 22px;
+      border-left: 1px solid #ddd;
       text-decoration: none;
-      color: #222;
-      font-weight: 800;
-      font-size: 12px;
+      color: #1f1f2b;
+      font-weight: 900;
+      font-size: 18px;
       text-align: center;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 4px;
-      min-width: 70px;
+      justify-content: center;
+      gap: 8px;
     }
+
+    .nav-menu a:first-child { border-left: none; }
 
     .nav-menu a span {
-      font-size: 19px;
-      color: #5b2cff;
+      font-size: 31px;
+      color: #4f18df;
+      line-height: 1;
     }
 
-    .hero {
-      min-height: 520px;
-      padding: 70px 6%;
+    .hero-wrap {
+      width: 97%;
+      margin: 0 auto 18px auto;
+      padding: 28px;
+      border-radius: 30px;
+      background: linear-gradient(135deg, #fff3fa, #eef4ff);
+      box-shadow: 0 12px 35px rgba(100, 80, 255, 0.12);
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 35px;
+      grid-template-columns: 0.78fr 1.22fr;
+      gap: 32px;
+      align-items: stretch;
+      overflow: hidden;
+    }
+
+    .hero-text {
+      position: relative;
+      padding: 22px 28px;
+      border-radius: 26px;
+      background: linear-gradient(135deg, #fff8fc, #fff0f8);
+      min-height: 380px;
+      overflow: hidden;
+    }
+
+    .hero-text::before {
+      content: "✦";
+      position: absolute;
+      left: 18px;
+      top: 34px;
+      color: #ff5ca8;
+      font-size: 28px;
+    }
+
+    .decor {
+      position: absolute;
+      font-size: 24px;
+      opacity: .8;
+    }
+
+    .d1 { right: 85px; top: 38px; color: #ff5ca8; }
+    .d2 { right: 28px; top: 88px; color: #8e7cff; font-size: 30px; }
+    .d3 { right: 55px; bottom: 65px; color: #ff5ca8; }
+    .d4 { right: 130px; bottom: 28px; color: #ffe357; }
+
+    .badge {
+      display: inline-flex;
       align-items: center;
-      background: linear-gradient(135deg, #fff0f7, #eef2ff);
-    }
-
-    .hero h1 {
-      font-size: 48px;
-      line-height: 1.05;
+      gap: 8px;
+      border: 2px solid #ff9ac7;
+      background: #fff4fa;
+      color: #f00667;
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-weight: 900;
+      font-size: 15px;
       margin-bottom: 18px;
-      color: #1f1f1f;
     }
 
-    .hero h1 span { color: #e91e63; }
+    .hero-text h1 {
+      font-size: 46px;
+      line-height: .98;
+      letter-spacing: -1.5px;
+      margin-bottom: 18px;
+      color: #20202a;
+      font-weight: 900;
+    }
 
-    .hero p {
-      font-size: 19px;
-      line-height: 1.5;
-      margin-bottom: 24px;
-      color: #444;
+    .hero-text h1 span { color: #f00667; }
+
+    .hero-text p {
+      font-size: 17px;
+      line-height: 1.35;
+      color: #333447;
+      margin-bottom: 22px;
+      max-width: 600px;
+      font-weight: 600;
     }
 
     .btn {
-      display: inline-block;
-      background: #25d366;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #05c819;
       color: white;
       padding: 15px 24px;
-      border-radius: 999px;
+      border-radius: 14px;
       text-decoration: none;
+      font-size: 18px;
       font-weight: 900;
-      box-shadow: 0 10px 25px rgba(37,211,102,0.35);
+      box-shadow: 0 12px 24px rgba(5,200,25,0.28);
     }
 
-    .hero-card {
-      background: white;
-      border-radius: 30px;
-      padding: 28px;
-      box-shadow: 0 20px 55px rgba(0,0,0,0.12);
+    .secure {
+      margin-top: 12px;
+      margin-left: 14px;
+      color: #9b89c4;
+      font-weight: 900;
+      font-size: 15px;
     }
 
-    .hero-card img {
+    .hero-image {
+      border-radius: 24px;
+      overflow: hidden;
+      min-height: 380px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+      background: #fff;
+    }
+
+    .hero-image img {
       width: 100%;
-      border-radius: 22px;
+      height: 100%;
+      object-fit: cover;
       display: block;
     }
 
-    .badge {
-      display: inline-block;
-      background: #ffe0ef;
-      color: #e91e63;
-      padding: 8px 14px;
-      border-radius: 999px;
-      font-weight: bold;
-      margin-bottom: 14px;
+    .strip {
+      width: 97%;
+      margin: 0 auto;
+      background: linear-gradient(90deg, #4213d8, #691cff);
+      color: white;
+      text-align: center;
+      padding: 17px 6%;
+      font-size: 24px;
+      font-weight: 900;
+      border-radius: 12px;
+      box-shadow: 0 10px 22px rgba(70, 25, 220, .28);
+      position: relative;
     }
 
-    section { padding: 55px 6%; }
+    .strip::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: -16px;
+      transform: translateX(-50%);
+      border-left: 18px solid transparent;
+      border-right: 18px solid transparent;
+      border-top: 18px solid #691cff;
+    }
+
+    section { padding: 30px 6% 55px; }
 
     .title {
       text-align: center;
-      font-size: 34px;
-      margin-bottom: 12px;
+      font-size: 38px;
+      margin-top: 12px;
+      margin-bottom: 10px;
+      font-weight: 900;
+      letter-spacing: -1px;
     }
 
     .subtitle {
@@ -203,15 +291,6 @@
       font-size: 15px;
     }
 
-    .strip {
-      background: #1f1f1f;
-      color: white;
-      text-align: center;
-      padding: 30px 6%;
-      font-size: 22px;
-      font-weight: 900;
-    }
-
     .delivery {
       background: white;
       border-radius: 28px;
@@ -253,51 +332,24 @@
       z-index: 20;
     }
 
-    @media (max-width: 900px) {
-      .top-banner {
-        height: 145px;
-      }
-
+    @media (max-width: 1000px) {
       .menu-bar {
-        width: 94%;
+        margin-top: -105px;
         flex-direction: column;
-        gap: 14px;
-        padding: 14px;
-      }
-
-      .logo {
-        font-size: 25px;
-        text-align: center;
-      }
-
-      .logo-icons {
-        font-size: 16px;
-        letter-spacing: 3px;
+        gap: 18px;
       }
 
       .nav-menu {
-        width: 100%;
-        justify-content: center;
         flex-wrap: wrap;
-        gap: 14px;
+        justify-content: center;
       }
 
-      .nav-menu a {
-        font-size: 11px;
-        min-width: 68px;
-      }
-
-      .nav-menu a span {
-        font-size: 17px;
-      }
-
-      .hero {
+      .hero-wrap {
         grid-template-columns: 1fr;
-        padding: 45px 6%;
       }
 
-      .hero h1 {
-        font-size: 36px;
+      .hero-text h1 {
+        font-size: 38px;
       }
     }
   </style>
@@ -325,89 +377,105 @@
   </div>
 </header>
 
-<section class="hero">
-  <div>
-    <div class="badge">Entrega local en Punta Arenas</div>
-    <h1>Todo para tu <span>cumpleaños</span> sin pagar de más</h1>
-    <p>
-      Artículos de cumpleaños, cotillón, globos, decoración, bandejas,
-      bolsitas sorpresa y productos de librería. Compra fácil por WhatsApp
-      y recibe en Punta Arenas.
-    </p>
-    <a class="btn" href="https://wa.me/56912345678?text=Hola%20CumplePatagonia,%20quiero%20hacer%20un%20pedido">
-      Comprar por WhatsApp
-    </a>
+<main>
+  <div class="hero-wrap">
+    <div class="hero-text">
+      <span class="decor d1">✦</span>
+      <span class="decor d2">⌇</span>
+      <span class="decor d3">✹</span>
+      <span class="decor d4">●</span>
+
+      <div class="badge">📍 Entrega local en Punta Arenas</div>
+
+      <h1>
+        Todo para tu<br>
+        <span>cumpleaños</span><br>
+        sin pagar de más
+      </h1>
+
+      <p>
+        Artículos de cumpleaños, cotillón, globos, decoración, bandejas,
+        bolsitas sorpresa y productos de librería. Compra fácil por WhatsApp
+        y recibe en Punta Arenas.
+      </p>
+
+      <a class="btn" href="https://wa.me/56912345678?text=Hola%20CumplePatagonia,%20quiero%20hacer%20un%20pedido">
+        💬 Comprar por WhatsApp
+      </a>
+
+      <div class="secure">⊙ Rápido, fácil y seguro</div>
+    </div>
+
+    <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1400&q=90" alt="Cumpleaños con globos y decoración">
+    </div>
   </div>
 
-  <div class="hero-card">
-    <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=900&q=80" alt="Cumpleaños con globos y decoración">
+  <div class="strip">
+    🎉 Packs listos para cumpleaños, colegios y celebraciones familiares ❯
   </div>
-</section>
 
-<div class="strip">
-  🎉 Packs listos para cumpleaños, colegios y celebraciones familiares
-</div>
+  <section id="categorias">
+    <h2 class="title">Categorías principales</h2>
+    <p class="subtitle">Elige una categoría y revisa el catálogo disponible en Punta Arenas.</p>
 
-<section id="categorias">
-  <h2 class="title">Categorías principales</h2>
-  <p class="subtitle">Elige una categoría y revisa el catálogo disponible en Punta Arenas.</p>
+    <div class="grid">
+      <a href="cumpleanos/" class="card category-link">
+        <div class="card-img">🎂</div>
+        <div class="card-body">
+          <h3>Cumpleaños</h3>
+          <p>Platos, vasos, velas, manteles, bandejas, servilletas y decoración temática.</p>
+        </div>
+      </a>
 
-  <div class="grid">
-    <a href="cumpleanos/" class="card category-link">
-      <div class="card-img">🎂</div>
-      <div class="card-body">
-        <h3>Cumpleaños</h3>
-        <p>Platos, vasos, velas, manteles, bandejas, servilletas y decoración temática.</p>
-      </div>
-    </a>
+      <a href="globos/" class="card category-link">
+        <div class="card-img">🎈</div>
+        <div class="card-body">
+          <h3>Globos y decoración</h3>
+          <p>Globos, guirnaldas, fondos, números, letras y decoración para mesas.</p>
+        </div>
+      </a>
 
-    <a href="globos/" class="card category-link">
-      <div class="card-img">🎈</div>
-      <div class="card-body">
-        <h3>Globos y decoración</h3>
-        <p>Globos, guirnaldas, fondos, números, letras y decoración para mesas.</p>
-      </div>
-    </a>
+      <a href="dulces/" class="card category-link">
+        <div class="card-img">🍬</div>
+        <div class="card-body">
+          <h3>Dulces y sorpresas</h3>
+          <p>Bolsitas sorpresa, dulces, chocolates, relleno de piñata y premios para niños.</p>
+        </div>
+      </a>
 
-    <a href="dulces/" class="card category-link">
-      <div class="card-img">🍬</div>
-      <div class="card-body">
-        <h3>Dulces y sorpresas</h3>
-        <p>Bolsitas sorpresa, dulces, chocolates, relleno de piñata y premios para niños.</p>
-      </div>
-    </a>
+      <a href="libreria/" class="card category-link">
+        <div class="card-img">📚</div>
+        <div class="card-body">
+          <h3>Librería</h3>
+          <p>Cuadernos, lápices, cartulinas, pegamento, goma eva y útiles escolares.</p>
+        </div>
+      </a>
 
-    <a href="libreria/" class="card category-link">
-      <div class="card-img">📚</div>
-      <div class="card-body">
-        <h3>Librería</h3>
-        <p>Cuadernos, lápices, cartulinas, pegamento, goma eva y útiles escolares.</p>
-      </div>
-    </a>
+      <a href="packs/" class="card category-link">
+        <div class="card-img">🎁</div>
+        <div class="card-body">
+          <h3>Packs armados</h3>
+          <p>Packs de cumpleaños, decoración de mesa, escolares y celebraciones rápidas.</p>
+        </div>
+      </a>
+    </div>
+  </section>
 
-    <a href="packs/" class="card category-link">
-      <div class="card-img">🎁</div>
-      <div class="card-body">
-        <h3>Packs armados</h3>
-        <p>Packs de cumpleaños, decoración de mesa, escolares y celebraciones rápidas.</p>
-      </div>
-    </a>
-  </div>
-</section>
-
-<section id="contacto">
-  <div class="delivery">
-    <h2>🚚 Despacho en Punta Arenas</h2>
-    <p>
-      Haz tu pedido por WhatsApp, confirma disponibilidad y coordina retiro o despacho.
-      Atención especial para cumpleaños, colegios, jardines infantiles y eventos familiares.
-    </p>
-    <br>
-    <a class="btn" href="https://wa.me/56912345678?text=Hola%20CumplePatagonia,%20necesito%20cotizar%20articulos%20de%20cumpleaños">
-      Cotizar ahora
-    </a>
-  </div>
-</section>
+  <section id="contacto">
+    <div class="delivery">
+      <h2>🚚 Despacho en Punta Arenas</h2>
+      <p>
+        Haz tu pedido por WhatsApp, confirma disponibilidad y coordina retiro o despacho.
+        Atención especial para cumpleaños, colegios, jardines infantiles y eventos familiares.
+      </p>
+      <br>
+      <a class="btn" href="https://wa.me/56912345678?text=Hola%20CumplePatagonia,%20necesito%20cotizar%20articulos%20de%20cumpleaños">
+        Cotizar ahora
+      </a>
+    </div>
+  </section>
+</main>
 
 <footer>
   <p><strong>CumplePatagonia</strong></p>
