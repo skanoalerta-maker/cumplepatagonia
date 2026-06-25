@@ -8,7 +8,8 @@
     "precio_publicado": "precio_final_iva_incluido",
     "sin_envio": true,
     "total_productos": 100,
-    "criterio": "Solo productos útiles para sección Librería: escolar, papelería, escritorio, escritura, archivo, manualidades y oficina básica."
+    "criterio": "Solo productos útiles para sección Librería: escolar, papelería, escritorio, escritura, archivo, manualidades y oficina básica.",
+    "imagenes": "Las imágenes se vinculan por SKU/codigo en assets/productos/{sku}.png"
   },
   "productos": [
     {
@@ -31,13 +32,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Archivador Ancho Oficio Burdeo",
-      "imagen": "assets/productos/r287602-archivador-ancho-oficio-burdeo.jpg",
+      "imagen": "assets/productos/R287602.png",
       "cotizacion_base": "11676223",
       "fecha_cotizacion": "2026-02-27",
       "cantidad_referencia": 140,
       "archivo_fuente": "cotizacion_11676223 (1).pdf",
       "precio_final_iva_incluido": 1930,
-      "categoria_cumplepatagonia": "archivo"
+      "categoria_cumplepatagonia": "archivo",
+      "sku": "R287602",
+      "sku_imagen": "R287602"
     },
     {
       "codigo": "R409501",
@@ -59,13 +62,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Carpeta Colgante Fleje Plastico Kraft",
-      "imagen": "assets/productos/r409501-carpeta-colgante-fleje-plastico-kraft.jpg",
+      "imagen": "assets/productos/R409501.png",
       "cotizacion_base": "11676223",
       "fecha_cotizacion": "2026-02-27",
       "cantidad_referencia": 15,
       "archivo_fuente": "cotizacion_11676223 (1).pdf",
       "precio_final_iva_incluido": 360,
-      "categoria_cumplepatagonia": "archivo"
+      "categoria_cumplepatagonia": "archivo",
+      "sku": "R409501",
+      "sku_imagen": "R409501"
     },
     {
       "codigo": "U600189",
@@ -87,13 +92,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Carpeta Con Fundas Oficio 40 Un Negra",
-      "imagen": "assets/productos/u600189-carpeta-con-fundas-oficio-40-un-negra.jpg",
+      "imagen": "assets/productos/U600189.png",
       "cotizacion_base": "11672476",
       "fecha_cotizacion": "2026-02-24",
       "cantidad_referencia": 10,
       "archivo_fuente": "cotizacion_11672476 (1).pdf",
       "precio_final_iva_incluido": 2700,
-      "categoria_cumplepatagonia": "archivo"
+      "categoria_cumplepatagonia": "archivo",
+      "sku": "U600189",
+      "sku_imagen": "U600189"
     },
     {
       "codigo": "S429738",
@@ -115,13 +122,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Carpeta Plastificada Con Gusano Oficio Amarilla",
-      "imagen": "assets/productos/s429738-carpeta-plastificada-con-gusano-oficio-amarilla.jpg",
+      "imagen": "assets/productos/S429738.png",
       "cotizacion_base": "11699037",
       "fecha_cotizacion": "2026-03-05",
       "cantidad_referencia": 4,
       "archivo_fuente": "cotizacion_11699037 (1).pdf",
       "precio_final_iva_incluido": 740,
-      "categoria_cumplepatagonia": "archivo"
+      "categoria_cumplepatagonia": "archivo",
+      "sku": "S429738",
+      "sku_imagen": "S429738"
     },
     {
       "codigo": "S429734",
@@ -143,13 +152,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Carpeta Plastificada Con Gusano Oficio Azul",
-      "imagen": "assets/productos/s429734-carpeta-plastificada-con-gusano-oficio-azul.jpg",
+      "imagen": "assets/productos/S429734.png",
       "cotizacion_base": "11672476",
       "fecha_cotizacion": "2026-02-24",
       "cantidad_referencia": 15,
       "archivo_fuente": "cotizacion_11672476 (1).pdf",
       "precio_final_iva_incluido": 720,
-      "categoria_cumplepatagonia": "archivo"
+      "categoria_cumplepatagonia": "archivo",
+      "sku": "S429734",
+      "sku_imagen": "S429734"
     },
     {
       "codigo": "S429740",
@@ -171,13 +182,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Carpeta Plastificada Con Gusano Oficio Naranja",
-      "imagen": "assets/productos/s429740-carpeta-plastificada-con-gusano-oficio-naranja.jpg",
+      "imagen": "assets/productos/S429740.png",
       "cotizacion_base": "11699037",
       "fecha_cotizacion": "2026-03-05",
       "cantidad_referencia": 30,
       "archivo_fuente": "cotizacion_11699037 (1).pdf",
       "precio_final_iva_incluido": 740,
-      "categoria_cumplepatagonia": "archivo"
+      "categoria_cumplepatagonia": "archivo",
+      "sku": "S429740",
+      "sku_imagen": "S429740"
     },
     {
       "codigo": "S429735",
@@ -199,13 +212,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Carpeta Plastificada Con Gusano Oficio Roja",
-      "imagen": "assets/productos/s429735-carpeta-plastificada-con-gusano-oficio-roja.jpg",
+      "imagen": "assets/productos/S429735.png",
       "cotizacion_base": "11699037",
       "fecha_cotizacion": "2026-03-05",
       "cantidad_referencia": 10,
       "archivo_fuente": "cotizacion_11699037 (1).pdf",
       "precio_final_iva_incluido": 740,
-      "categoria_cumplepatagonia": "archivo"
+      "categoria_cumplepatagonia": "archivo",
+      "sku": "S429735",
+      "sku_imagen": "S429735"
     },
     {
       "codigo": "T000138",
@@ -227,13 +242,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Block Dibujo 1/8 Medio N 99 20 Hojas",
-      "imagen": "assets/productos/t000138-block-dibujo-1-8-medio-n-99-20-hojas.jpg",
+      "imagen": "assets/productos/T000138.png",
       "cotizacion_base": "11699037",
       "fecha_cotizacion": "2026-03-05",
       "cantidad_referencia": 21,
       "archivo_fuente": "cotizacion_11699037 (1).pdf",
       "precio_final_iva_incluido": 2270,
-      "categoria_cumplepatagonia": "escolar"
+      "categoria_cumplepatagonia": "escolar",
+      "sku": "T000138",
+      "sku_imagen": "T000138"
     },
     {
       "codigo": "U600087",
@@ -255,13 +272,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Carpeta Con Elastico Cartulina Azul",
-      "imagen": "assets/productos/u600087-carpeta-con-elastico-cartulina-azul.jpg",
+      "imagen": "assets/productos/U600087.png",
       "cotizacion_base": "11672476",
       "fecha_cotizacion": "2026-02-24",
       "cantidad_referencia": 35,
       "archivo_fuente": "cotizacion_11672476 (1).pdf",
       "precio_final_iva_incluido": 800,
-      "categoria_cumplepatagonia": "escolar"
+      "categoria_cumplepatagonia": "escolar",
+      "sku": "U600087",
+      "sku_imagen": "U600087"
     },
     {
       "codigo": "T000204",
@@ -283,13 +302,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Carpeta Con Papel Cartulina X 18 Hojas X14 Color",
-      "imagen": "assets/productos/t000204-carpeta-con-papel-cartulina-x-18-hojas-x14-color.jpg",
+      "imagen": "assets/productos/T000204.png",
       "cotizacion_base": "11699037",
       "fecha_cotizacion": "2026-03-05",
       "cantidad_referencia": 20,
       "archivo_fuente": "cotizacion_11699037 (1).pdf",
       "precio_final_iva_incluido": 1790,
-      "categoria_cumplepatagonia": "escolar"
+      "categoria_cumplepatagonia": "escolar",
+      "sku": "T000204",
+      "sku_imagen": "T000204"
     },
     {
       "codigo": "551388",
@@ -311,13 +332,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Carpeta Con Papel Entretenido 9 Hojas 18 Disenos",
-      "imagen": "assets/productos/551388-carpeta-con-papel-entretenido-9-hojas-18-disenos.jpg",
+      "imagen": "assets/productos/551388.png",
       "cotizacion_base": "11699037",
       "fecha_cotizacion": "2026-03-05",
       "cantidad_referencia": 12,
       "archivo_fuente": "cotizacion_11699037 (1).pdf",
       "precio_final_iva_incluido": 1760,
-      "categoria_cumplepatagonia": "escolar"
+      "categoria_cumplepatagonia": "escolar",
+      "sku": "551388",
+      "sku_imagen": "551388"
     },
     {
       "codigo": "B000637",
@@ -339,13 +362,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Croquera 21X32 Cm Oficio Imagia 100 Hojas",
-      "imagen": "assets/productos/b000637-croquera-21x32-cm-oficio-imagia-100-hojas.jpg",
+      "imagen": "assets/productos/B000637.png",
       "cotizacion_base": "11699037",
       "fecha_cotizacion": "2026-03-05",
       "cantidad_referencia": 16,
       "archivo_fuente": "cotizacion_11699037 (1).pdf",
       "precio_final_iva_incluido": 3880,
-      "categoria_cumplepatagonia": "escolar"
+      "categoria_cumplepatagonia": "escolar",
+      "sku": "B000637",
+      "sku_imagen": "B000637"
     },
     {
       "codigo": "552302",
@@ -367,13 +392,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Cuaderno 1/2 Oficio Matematica 5 Mm Superclass 3",
-      "imagen": "assets/productos/552302-cuaderno-1-2-oficio-matematica-5-mm-superclass-3.jpg",
+      "imagen": "assets/productos/552302.png",
       "cotizacion_base": "11674836",
       "fecha_cotizacion": "2026-02-26",
       "cantidad_referencia": 14,
       "archivo_fuente": "cotizacion_11674836 (3).pdf",
       "precio_final_iva_incluido": 3680,
-      "categoria_cumplepatagonia": "escolar"
+      "categoria_cumplepatagonia": "escolar",
+      "sku": "552302",
+      "sku_imagen": "552302"
     },
     {
       "codigo": "553051",
@@ -395,13 +422,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Cuaderno College Matematicas 7 Mm 100 Hojas Liso",
-      "imagen": "assets/productos/553051-cuaderno-college-matematicas-7-mm-100-hojas-liso.jpg",
+      "imagen": "assets/productos/553051.png",
       "cotizacion_base": "11699037",
       "fecha_cotizacion": "2026-03-05",
       "cantidad_referencia": 70,
       "archivo_fuente": "cotizacion_11699037 (1).pdf",
       "precio_final_iva_incluido": 1470,
-      "categoria_cumplepatagonia": "escolar"
+      "categoria_cumplepatagonia": "escolar",
+      "sku": "553051",
+      "sku_imagen": "553051"
     },
     {
       "codigo": "U377347",
@@ -423,13 +452,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Cuaderno Universitario Matematica 7 Mm 100 Hojas",
-      "imagen": "assets/productos/u377347-cuaderno-universitario-matematica-7-mm-100-hojas.jpg",
+      "imagen": "assets/productos/U377347.png",
       "cotizacion_base": "11699037",
       "fecha_cotizacion": "2026-03-05",
       "cantidad_referencia": 90,
       "archivo_fuente": "cotizacion_11699037 (1).pdf",
       "precio_final_iva_incluido": 1840,
-      "categoria_cumplepatagonia": "escolar"
+      "categoria_cumplepatagonia": "escolar",
+      "sku": "U377347",
+      "sku_imagen": "U377347"
     },
     {
       "codigo": "552184",
@@ -451,13 +482,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Lapices De Colores 12 Un + 2 Grafito",
-      "imagen": "assets/productos/552184-lapices-de-colores-12-un-2-grafito.jpg",
+      "imagen": "assets/productos/552184.png",
       "cotizacion_base": "11699037",
       "fecha_cotizacion": "2026-03-05",
       "cantidad_referencia": 20,
       "archivo_fuente": "cotizacion_11699037 (1).pdf",
       "precio_final_iva_incluido": 1690,
-      "categoria_cumplepatagonia": "escolar"
+      "categoria_cumplepatagonia": "escolar",
+      "sku": "552184",
+      "sku_imagen": "552184"
     },
     {
       "codigo": "542453",
@@ -479,13 +512,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Set Pinceles Soft Touch Colores",
-      "imagen": "assets/productos/542453-set-pinceles-soft-touch-colores.jpg",
+      "imagen": "assets/productos/542453.png",
       "cotizacion_base": "11699037",
       "fecha_cotizacion": "2026-03-05",
       "cantidad_referencia": 31,
       "archivo_fuente": "cotizacion_11699037 (1).pdf",
       "precio_final_iva_incluido": 3250,
-      "categoria_cumplepatagonia": "escolar"
+      "categoria_cumplepatagonia": "escolar",
+      "sku": "542453",
+      "sku_imagen": "542453"
     },
     {
       "codigo": "308608",
@@ -507,13 +542,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Tempera 12 Colores 22 Ml Xl",
-      "imagen": "assets/productos/308608-tempera-12-colores-22-ml-xl.jpg",
+      "imagen": "assets/productos/308608.png",
       "cotizacion_base": "11699037",
       "fecha_cotizacion": "2026-03-05",
       "cantidad_referencia": 27,
       "archivo_fuente": "cotizacion_11699037 (1).pdf",
       "precio_final_iva_incluido": 2070,
-      "categoria_cumplepatagonia": "escolar"
+      "categoria_cumplepatagonia": "escolar",
+      "sku": "308608",
+      "sku_imagen": "308608"
     },
     {
       "codigo": "488946",
@@ -535,13 +572,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Corrector Cinta 6 Mt X 5 Mm Stand Up",
-      "imagen": "assets/productos/488946-corrector-cinta-6-mt-x-5-mm-stand-up.jpg",
+      "imagen": "assets/productos/488946.png",
       "cotizacion_base": "11699037",
       "fecha_cotizacion": "2026-03-05",
       "cantidad_referencia": 31,
       "archivo_fuente": "cotizacion_11699037 (1).pdf",
       "precio_final_iva_incluido": 1500,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "488946",
+      "sku_imagen": "488946"
     },
     {
       "codigo": "498824",
@@ -563,13 +602,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Corrector En Cinta 5Mmx6Mt Colores",
-      "imagen": "assets/productos/498824-corrector-en-cinta-5mmx6mt-colores.jpg",
+      "imagen": "assets/productos/498824.png",
       "cotizacion_base": "11674836",
       "fecha_cotizacion": "2026-02-26",
       "cantidad_referencia": 40,
       "archivo_fuente": "cotizacion_11674836 (3).pdf",
       "precio_final_iva_incluido": 1190,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "498824",
+      "sku_imagen": "498824"
     },
     {
       "codigo": "T000432",
@@ -591,13 +632,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Corrector Lapiz Punta Metal 7 Ml",
-      "imagen": "assets/productos/t000432-corrector-lapiz-punta-metal-7-ml.jpg",
+      "imagen": "assets/productos/T000432.png",
       "cotizacion_base": "11673590",
       "fecha_cotizacion": "2026-02-25",
       "cantidad_referencia": 290,
       "archivo_fuente": "cotizacion_11673590.pdf",
       "precio_final_iva_incluido": 560,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "T000432",
+      "sku_imagen": "T000432"
     },
     {
       "codigo": "553957",
@@ -619,13 +662,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Destacador Escritorio Amarillo Fluor",
-      "imagen": "assets/productos/553957-destacador-escritorio-amarillo-fluor.jpg",
+      "imagen": "assets/productos/553957.png",
       "cotizacion_base": "11673979",
       "fecha_cotizacion": "2026-02-25",
       "cantidad_referencia": 10,
       "archivo_fuente": "cotizacion_11673979.pdf",
       "precio_final_iva_incluido": 400,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "553957",
+      "sku_imagen": "553957"
     },
     {
       "codigo": "U435174",
@@ -647,13 +692,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Destacador Escritorio Amarillo Fluor",
-      "imagen": "assets/productos/u435174-destacador-escritorio-amarillo-fluor.jpg",
+      "imagen": "assets/productos/U435174.png",
       "cotizacion_base": "11674836",
       "fecha_cotizacion": "2026-02-26",
       "cantidad_referencia": 20,
       "archivo_fuente": "cotizacion_11674836 (3).pdf",
       "precio_final_iva_incluido": 300,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "U435174",
+      "sku_imagen": "U435174"
     },
     {
       "codigo": "553394",
@@ -675,13 +722,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Destacador Escritorio Amarillo Fluor",
-      "imagen": "assets/productos/553394-destacador-escritorio-amarillo-fluor.jpg",
+      "imagen": "assets/productos/553394.png",
       "cotizacion_base": "11699037",
       "fecha_cotizacion": "2026-03-05",
       "cantidad_referencia": 31,
       "archivo_fuente": "cotizacion_11699037 (1).pdf",
       "precio_final_iva_incluido": 660,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "553394",
+      "sku_imagen": "553394"
     },
     {
       "codigo": "547002",
@@ -703,13 +752,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Destacador Escritorio Amarillo Fluor",
-      "imagen": "assets/productos/547002-destacador-escritorio-amarillo-fluor.jpg",
+      "imagen": "assets/productos/547002.png",
       "cotizacion_base": "11673548",
       "fecha_cotizacion": "2026-02-25",
       "cantidad_referencia": 10,
       "archivo_fuente": "cotizacion_11673548 (1).pdf",
       "precio_final_iva_incluido": 720,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "547002",
+      "sku_imagen": "547002"
     },
     {
       "codigo": "553954",
@@ -731,13 +782,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Destacador Escritorio Celeste Fluor",
-      "imagen": "assets/productos/553954-destacador-escritorio-celeste-fluor.jpg",
+      "imagen": "assets/productos/553954.png",
       "cotizacion_base": "11674836",
       "fecha_cotizacion": "2026-02-26",
       "cantidad_referencia": 20,
       "archivo_fuente": "cotizacion_11674836 (3).pdf",
       "precio_final_iva_incluido": 370,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "553954",
+      "sku_imagen": "553954"
     },
     {
       "codigo": "553958",
@@ -759,13 +812,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Destacador Escritorio Morado Fluor",
-      "imagen": "assets/productos/553958-destacador-escritorio-morado-fluor.jpg",
+      "imagen": "assets/productos/553958.png",
       "cotizacion_base": "11674836",
       "fecha_cotizacion": "2026-02-26",
       "cantidad_referencia": 20,
       "archivo_fuente": "cotizacion_11674836 (3).pdf",
       "precio_final_iva_incluido": 370,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "553958",
+      "sku_imagen": "553958"
     },
     {
       "codigo": "553955",
@@ -787,13 +842,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Destacador Escritorio Naranjo Fluor",
-      "imagen": "assets/productos/553955-destacador-escritorio-naranjo-fluor.jpg",
+      "imagen": "assets/productos/553955.png",
       "cotizacion_base": "11674836",
       "fecha_cotizacion": "2026-02-26",
       "cantidad_referencia": 20,
       "archivo_fuente": "cotizacion_11674836 (3).pdf",
       "precio_final_iva_incluido": 360,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "553955",
+      "sku_imagen": "553955"
     },
     {
       "codigo": "553956",
@@ -815,13 +872,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Destacador Escritorio Rosado Fluor",
-      "imagen": "assets/productos/553956-destacador-escritorio-rosado-fluor.jpg",
+      "imagen": "assets/productos/553956.png",
       "cotizacion_base": "11674836",
       "fecha_cotizacion": "2026-02-26",
       "cantidad_referencia": 20,
       "archivo_fuente": "cotizacion_11674836 (3).pdf",
       "precio_final_iva_incluido": 370,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "553956",
+      "sku_imagen": "553956"
     },
     {
       "codigo": "547001",
@@ -843,13 +902,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Destacador Escritorio Rosado Fluor",
-      "imagen": "assets/productos/547001-destacador-escritorio-rosado-fluor.jpg",
+      "imagen": "assets/productos/547001.png",
       "cotizacion_base": "11673548",
       "fecha_cotizacion": "2026-02-25",
       "cantidad_referencia": 5,
       "archivo_fuente": "cotizacion_11673548 (1).pdf",
       "precio_final_iva_incluido": 740,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "547001",
+      "sku_imagen": "547001"
     },
     {
       "codigo": "553953",
@@ -871,13 +932,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Destacador Escritorio Verde Fluor",
-      "imagen": "assets/productos/553953-destacador-escritorio-verde-fluor.jpg",
+      "imagen": "assets/productos/553953.png",
       "cotizacion_base": "11674836",
       "fecha_cotizacion": "2026-02-26",
       "cantidad_referencia": 20,
       "archivo_fuente": "cotizacion_11674836 (3).pdf",
       "precio_final_iva_incluido": 360,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "553953",
+      "sku_imagen": "553953"
     },
     {
       "codigo": "547003",
@@ -899,13 +962,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Destacador Escritorio Verde Fluor",
-      "imagen": "assets/productos/547003-destacador-escritorio-verde-fluor.jpg",
+      "imagen": "assets/productos/547003.png",
       "cotizacion_base": "11673548",
       "fecha_cotizacion": "2026-02-25",
       "cantidad_referencia": 5,
       "archivo_fuente": "cotizacion_11673548 (1).pdf",
       "precio_final_iva_incluido": 740,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "547003",
+      "sku_imagen": "547003"
     },
     {
       "codigo": "494774",
@@ -927,13 +992,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Lapiz Grafito 2Hb Hexagonal Sin Goma",
-      "imagen": "assets/productos/494774-lapiz-grafito-2hb-hexagonal-sin-goma.jpg",
+      "imagen": "assets/productos/494774.png",
       "cotizacion_base": "11672476",
       "fecha_cotizacion": "2026-02-24",
       "cantidad_referencia": 72,
       "archivo_fuente": "cotizacion_11672476 (1).pdf",
       "precio_final_iva_incluido": 90,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "494774",
+      "sku_imagen": "494774"
     },
     {
       "codigo": "L590104",
@@ -955,13 +1022,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Lapiz Grafito 2Hb Redondo Sin Goma",
-      "imagen": "assets/productos/l590104-lapiz-grafito-2hb-redondo-sin-goma.jpg",
+      "imagen": "assets/productos/L590104.png",
       "cotizacion_base": "11699037",
       "fecha_cotizacion": "2026-03-05",
       "cantidad_referencia": 31,
       "archivo_fuente": "cotizacion_11699037 (1).pdf",
       "precio_final_iva_incluido": 100,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "L590104",
+      "sku_imagen": "L590104"
     },
     {
       "codigo": "U463094",
@@ -983,13 +1052,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Lapiz Pasta Punta Media Azul 1.0 Mm",
-      "imagen": "assets/productos/u463094-lapiz-pasta-punta-media-azul-1-0-mm.jpg",
+      "imagen": "assets/productos/U463094.png",
       "cotizacion_base": "11699037",
       "fecha_cotizacion": "2026-03-05",
       "cantidad_referencia": 31,
       "archivo_fuente": "cotizacion_11699037 (1).pdf",
       "precio_final_iva_incluido": 110,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "U463094",
+      "sku_imagen": "U463094"
     },
     {
       "codigo": "U423751",
@@ -1011,13 +1082,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Lapiz Pasta Punta Media Negro 1.0 Mm",
-      "imagen": "assets/productos/u423751-lapiz-pasta-punta-media-negro-1-0-mm.jpg",
+      "imagen": "assets/productos/U423751.png",
       "cotizacion_base": "11673590",
       "fecha_cotizacion": "2026-02-25",
       "cantidad_referencia": 725,
       "archivo_fuente": "cotizacion_11673590.pdf",
       "precio_final_iva_incluido": 170,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "U423751",
+      "sku_imagen": "U423751"
     },
     {
       "codigo": "U463095",
@@ -1039,13 +1112,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Lapiz Pasta Punta Media Negro 1.0 Mm",
-      "imagen": "assets/productos/u463095-lapiz-pasta-punta-media-negro-1-0-mm.jpg",
+      "imagen": "assets/productos/U463095.png",
       "cotizacion_base": "11672476",
       "fecha_cotizacion": "2026-02-24",
       "cantidad_referencia": 50,
       "archivo_fuente": "cotizacion_11672476 (1).pdf",
       "precio_final_iva_incluido": 130,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "U463095",
+      "sku_imagen": "U463095"
     },
     {
       "codigo": "L182813",
@@ -1067,13 +1142,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Lapiz Pasta Punta Media Rojo 1.0 Mm",
-      "imagen": "assets/productos/l182813-lapiz-pasta-punta-media-rojo-1-0-mm.jpg",
+      "imagen": "assets/productos/L182813.png",
       "cotizacion_base": "11673590",
       "fecha_cotizacion": "2026-02-25",
       "cantidad_referencia": 400,
       "archivo_fuente": "cotizacion_11673590.pdf",
       "precio_final_iva_incluido": 290,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "L182813",
+      "sku_imagen": "L182813"
     },
     {
       "codigo": "463096",
@@ -1095,13 +1172,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Lapiz Pasta Punta Media Rojo 1.0 Mm",
-      "imagen": "assets/productos/463096-lapiz-pasta-punta-media-rojo-1-0-mm.jpg",
+      "imagen": "assets/productos/463096.png",
       "cotizacion_base": "11699037",
       "fecha_cotizacion": "2026-03-05",
       "cantidad_referencia": 31,
       "archivo_fuente": "cotizacion_11699037 (1).pdf",
       "precio_final_iva_incluido": 130,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "463096",
+      "sku_imagen": "463096"
     },
     {
       "codigo": "525944",
@@ -1123,13 +1202,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Marcador De Pizarra Desech. Pta.Fina. Negro",
-      "imagen": "assets/productos/525944-marcador-de-pizarra-desech-pta-fina-negro.jpg",
+      "imagen": "assets/productos/525944.png",
       "cotizacion_base": "11739937",
       "fecha_cotizacion": "2026-03-19",
       "cantidad_referencia": 1,
       "archivo_fuente": "cotizacion_11739937.pdf",
       "precio_final_iva_incluido": 330,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "525944",
+      "sku_imagen": "525944"
     },
     {
       "codigo": "524135",
@@ -1151,13 +1232,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Marcador Permanente Doble Punta Negro",
-      "imagen": "assets/productos/524135-marcador-permanente-doble-punta-negro.jpg",
+      "imagen": "assets/productos/524135.png",
       "cotizacion_base": "11739937",
       "fecha_cotizacion": "2026-03-19",
       "cantidad_referencia": 1,
       "archivo_fuente": "cotizacion_11739937.pdf",
       "precio_final_iva_incluido": 340,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "524135",
+      "sku_imagen": "524135"
     },
     {
       "codigo": "U387501",
@@ -1179,13 +1262,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Marcador Permanente Jumbo Azul",
-      "imagen": "assets/productos/u387501-marcador-permanente-jumbo-azul.jpg",
+      "imagen": "assets/productos/U387501.png",
       "cotizacion_base": "11739937",
       "fecha_cotizacion": "2026-03-19",
       "cantidad_referencia": 1,
       "archivo_fuente": "cotizacion_11739937.pdf",
       "precio_final_iva_incluido": 1090,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "U387501",
+      "sku_imagen": "U387501"
     },
     {
       "codigo": "U387500",
@@ -1207,13 +1292,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Marcador Permanente Jumbo Negro",
-      "imagen": "assets/productos/u387500-marcador-permanente-jumbo-negro.jpg",
+      "imagen": "assets/productos/U387500.png",
       "cotizacion_base": "11739937",
       "fecha_cotizacion": "2026-03-19",
       "cantidad_referencia": 1,
       "archivo_fuente": "cotizacion_11739937.pdf",
       "precio_final_iva_incluido": 1100,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "U387500",
+      "sku_imagen": "U387500"
     },
     {
       "codigo": "L385111",
@@ -1235,13 +1322,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Marcador Permanente Punta Biselada Azul Desechab",
-      "imagen": "assets/productos/l385111-marcador-permanente-punta-biselada-azul-desechab.jpg",
+      "imagen": "assets/productos/L385111.png",
       "cotizacion_base": "11739937",
       "fecha_cotizacion": "2026-03-19",
       "cantidad_referencia": 1,
       "archivo_fuente": "cotizacion_11739937.pdf",
       "precio_final_iva_incluido": 280,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "L385111",
+      "sku_imagen": "L385111"
     },
     {
       "codigo": "121514",
@@ -1263,13 +1352,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Marcador Permanente Punta Biselada Azul Mod S60",
-      "imagen": "assets/productos/121514-marcador-permanente-punta-biselada-azul-mod-s60.jpg",
+      "imagen": "assets/productos/121514.png",
       "cotizacion_base": "11739937",
       "fecha_cotizacion": "2026-03-19",
       "cantidad_referencia": 1,
       "archivo_fuente": "cotizacion_11739937.pdf",
       "precio_final_iva_incluido": 580,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "121514",
+      "sku_imagen": "121514"
     },
     {
       "codigo": "L385104",
@@ -1291,13 +1382,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Marcador Permanente Punta Biselada Negro Desecha",
-      "imagen": "assets/productos/l385104-marcador-permanente-punta-biselada-negro-desecha.jpg",
+      "imagen": "assets/productos/L385104.png",
       "cotizacion_base": "11739937",
       "fecha_cotizacion": "2026-03-19",
       "cantidad_referencia": 1,
       "archivo_fuente": "cotizacion_11739937.pdf",
       "precio_final_iva_incluido": 240,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "L385104",
+      "sku_imagen": "L385104"
     },
     {
       "codigo": "L385113",
@@ -1319,13 +1412,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Marcador Permanente Punta Biselada Rojo Desechab",
-      "imagen": "assets/productos/l385113-marcador-permanente-punta-biselada-rojo-desechab.jpg",
+      "imagen": "assets/productos/L385113.png",
       "cotizacion_base": "11739937",
       "fecha_cotizacion": "2026-03-19",
       "cantidad_referencia": 1,
       "archivo_fuente": "cotizacion_11739937.pdf",
       "precio_final_iva_incluido": 280,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "L385113",
+      "sku_imagen": "L385113"
     },
     {
       "codigo": "498349",
@@ -1347,13 +1442,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Marcador Permanente Punta Fina 0.8 Mm Negro",
-      "imagen": "assets/productos/498349-marcador-permanente-punta-fina-0-8-mm-negro.jpg",
+      "imagen": "assets/productos/498349.png",
       "cotizacion_base": "11739937",
       "fecha_cotizacion": "2026-03-19",
       "cantidad_referencia": 1,
       "archivo_fuente": "cotizacion_11739937.pdf",
       "precio_final_iva_incluido": 740,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "498349",
+      "sku_imagen": "498349"
     },
     {
       "codigo": "521877",
@@ -1375,13 +1472,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Marcador Permanente Punta Fina Negro",
-      "imagen": "assets/productos/521877-marcador-permanente-punta-fina-negro.jpg",
+      "imagen": "assets/productos/521877.png",
       "cotizacion_base": "11739937",
       "fecha_cotizacion": "2026-03-19",
       "cantidad_referencia": 1,
       "archivo_fuente": "cotizacion_11739937.pdf",
       "precio_final_iva_incluido": 1180,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "521877",
+      "sku_imagen": "521877"
     },
     {
       "codigo": "L385204",
@@ -1403,13 +1502,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Marcador Permanente Punta Fina Negro Desechable",
-      "imagen": "assets/productos/l385204-marcador-permanente-punta-fina-negro-desechable.jpg",
+      "imagen": "assets/productos/L385204.png",
       "cotizacion_base": "11739937",
       "fecha_cotizacion": "2026-03-19",
       "cantidad_referencia": 1,
       "archivo_fuente": "cotizacion_11739937.pdf",
       "precio_final_iva_incluido": 320,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "L385204",
+      "sku_imagen": "L385204"
     },
     {
       "codigo": "L385213",
@@ -1431,13 +1532,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Marcador Permanente Punta Fina Rojo Desechable",
-      "imagen": "assets/productos/l385213-marcador-permanente-punta-fina-rojo-desechable.jpg",
+      "imagen": "assets/productos/L385213.png",
       "cotizacion_base": "11739937",
       "fecha_cotizacion": "2026-03-19",
       "cantidad_referencia": 1,
       "archivo_fuente": "cotizacion_11739937.pdf",
       "precio_final_iva_incluido": 330,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "L385213",
+      "sku_imagen": "L385213"
     },
     {
       "codigo": "120379",
@@ -1459,13 +1562,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Marcador Permanente Punta Redonda Azul",
-      "imagen": "assets/productos/120379-marcador-permanente-punta-redonda-azul.jpg",
+      "imagen": "assets/productos/120379.png",
       "cotizacion_base": "11739937",
       "fecha_cotizacion": "2026-03-19",
       "cantidad_referencia": 1,
       "archivo_fuente": "cotizacion_11739937.pdf",
       "precio_final_iva_incluido": 570,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "120379",
+      "sku_imagen": "120379"
     },
     {
       "codigo": "L385011",
@@ -1487,13 +1592,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Marcador Permanente Punta Redonda Azul Desechabl",
-      "imagen": "assets/productos/l385011-marcador-permanente-punta-redonda-azul-desechabl.jpg",
+      "imagen": "assets/productos/L385011.png",
       "cotizacion_base": "11739937",
       "fecha_cotizacion": "2026-03-19",
       "cantidad_referencia": 1,
       "archivo_fuente": "cotizacion_11739937.pdf",
       "precio_final_iva_incluido": 280,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "L385011",
+      "sku_imagen": "L385011"
     },
     {
       "codigo": "553424",
@@ -1515,13 +1622,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Marcador Permanente Punta Redonda Negro",
-      "imagen": "assets/productos/553424-marcador-permanente-punta-redonda-negro.jpg",
+      "imagen": "assets/productos/553424.png",
       "cotizacion_base": "11739937",
       "fecha_cotizacion": "2026-03-19",
       "cantidad_referencia": 1,
       "archivo_fuente": "cotizacion_11739937.pdf",
       "precio_final_iva_incluido": 610,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "553424",
+      "sku_imagen": "553424"
     },
     {
       "codigo": "522620",
@@ -1543,13 +1652,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Marcador Permanente Punta Redonda Negro",
-      "imagen": "assets/productos/522620-marcador-permanente-punta-redonda-negro.jpg",
+      "imagen": "assets/productos/522620.png",
       "cotizacion_base": "11739937",
       "fecha_cotizacion": "2026-03-19",
       "cantidad_referencia": 1,
       "archivo_fuente": "cotizacion_11739937.pdf",
       "precio_final_iva_incluido": 690,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "522620",
+      "sku_imagen": "522620"
     },
     {
       "codigo": "L400704",
@@ -1571,13 +1682,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Marcador Permanente Punta Redonda Negro Desechab",
-      "imagen": "assets/productos/l400704-marcador-permanente-punta-redonda-negro-desechab.jpg",
+      "imagen": "assets/productos/L400704.png",
       "cotizacion_base": "11739937",
       "fecha_cotizacion": "2026-03-19",
       "cantidad_referencia": 1,
       "archivo_fuente": "cotizacion_11739937.pdf",
       "precio_final_iva_incluido": 440,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "L400704",
+      "sku_imagen": "L400704"
     },
     {
       "codigo": "L385004",
@@ -1599,13 +1712,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Marcador Permanente Punta Redonda Negro Desechab",
-      "imagen": "assets/productos/l385004-marcador-permanente-punta-redonda-negro-desechab.jpg",
+      "imagen": "assets/productos/L385004.png",
       "cotizacion_base": "11739937",
       "fecha_cotizacion": "2026-03-19",
       "cantidad_referencia": 1,
       "archivo_fuente": "cotizacion_11739937.pdf",
       "precio_final_iva_incluido": 270,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "L385004",
+      "sku_imagen": "L385004"
     },
     {
       "codigo": "120381",
@@ -1627,13 +1742,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Marcador Permanente Punta Redonda Negro Mod S50",
-      "imagen": "assets/productos/120381-marcador-permanente-punta-redonda-negro-mod-s50.jpg",
+      "imagen": "assets/productos/120381.png",
       "cotizacion_base": "11739937",
       "fecha_cotizacion": "2026-03-19",
       "cantidad_referencia": 1,
       "archivo_fuente": "cotizacion_11739937.pdf",
       "precio_final_iva_incluido": 510,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "120381",
+      "sku_imagen": "120381"
     },
     {
       "codigo": "553426",
@@ -1655,13 +1772,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Marcador Permanente Punta Redonda Rojo",
-      "imagen": "assets/productos/553426-marcador-permanente-punta-redonda-rojo.jpg",
+      "imagen": "assets/productos/553426.png",
       "cotizacion_base": "11739937",
       "fecha_cotizacion": "2026-03-19",
       "cantidad_referencia": 1,
       "archivo_fuente": "cotizacion_11739937.pdf",
       "precio_final_iva_incluido": 610,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "553426",
+      "sku_imagen": "553426"
     },
     {
       "codigo": "L385013",
@@ -1683,13 +1802,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Marcador Permanente Punta Redonda Rojo Desechabl",
-      "imagen": "assets/productos/l385013-marcador-permanente-punta-redonda-rojo-desechabl.jpg",
+      "imagen": "assets/productos/L385013.png",
       "cotizacion_base": "11739937",
       "fecha_cotizacion": "2026-03-19",
       "cantidad_referencia": 1,
       "archivo_fuente": "cotizacion_11739937.pdf",
       "precio_final_iva_incluido": 280,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "L385013",
+      "sku_imagen": "L385013"
     },
     {
       "codigo": "534273",
@@ -1711,13 +1832,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Marcador Permanente Punta Redonda Tipo Lapiz Neg",
-      "imagen": "assets/productos/534273-marcador-permanente-punta-redonda-tipo-lapiz-neg.jpg",
+      "imagen": "assets/productos/534273.png",
       "cotizacion_base": "11739937",
       "fecha_cotizacion": "2026-03-19",
       "cantidad_referencia": 1,
       "archivo_fuente": "cotizacion_11739937.pdf",
       "precio_final_iva_incluido": 700,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "534273",
+      "sku_imagen": "534273"
     },
     {
       "codigo": "U379849",
@@ -1739,13 +1862,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Marcador Permanente Punta Ultra Fina Negro",
-      "imagen": "assets/productos/u379849-marcador-permanente-punta-ultra-fina-negro.jpg",
+      "imagen": "assets/productos/U379849.png",
       "cotizacion_base": "11673590",
       "fecha_cotizacion": "2026-02-25",
       "cantidad_referencia": 234,
       "archivo_fuente": "cotizacion_11673590.pdf",
       "precio_final_iva_incluido": 1370,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "U379849",
+      "sku_imagen": "U379849"
     },
     {
       "codigo": "P107413",
@@ -1767,13 +1892,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Marcador Pizarra Punta Fina Rojo",
-      "imagen": "assets/productos/p107413-marcador-pizarra-punta-fina-rojo.jpg",
+      "imagen": "assets/productos/P107413.png",
       "cotizacion_base": "11739937",
       "fecha_cotizacion": "2026-03-19",
       "cantidad_referencia": 1,
       "archivo_fuente": "cotizacion_11739937.pdf",
       "precio_final_iva_incluido": 1380,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "P107413",
+      "sku_imagen": "P107413"
     },
     {
       "codigo": "P107418",
@@ -1795,13 +1922,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Marcador Pizarra Punta Fina Verde",
-      "imagen": "assets/productos/p107418-marcador-pizarra-punta-fina-verde.jpg",
+      "imagen": "assets/productos/P107418.png",
       "cotizacion_base": "11739937",
       "fecha_cotizacion": "2026-03-19",
       "cantidad_referencia": 1,
       "archivo_fuente": "cotizacion_11739937.pdf",
       "precio_final_iva_incluido": 1420,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "P107418",
+      "sku_imagen": "P107418"
     },
     {
       "codigo": "553432",
@@ -1823,13 +1952,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Marcador Pizarra Punta Redonda Azul",
-      "imagen": "assets/productos/553432-marcador-pizarra-punta-redonda-azul.jpg",
+      "imagen": "assets/productos/553432.png",
       "cotizacion_base": "11739937",
       "fecha_cotizacion": "2026-03-19",
       "cantidad_referencia": 1,
       "archivo_fuente": "cotizacion_11739937.pdf",
       "precio_final_iva_incluido": 730,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "553432",
+      "sku_imagen": "553432"
     },
     {
       "codigo": "U426862",
@@ -1851,13 +1982,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Marcador Pizarra Punta Redonda Azul",
-      "imagen": "assets/productos/u426862-marcador-pizarra-punta-redonda-azul.jpg",
+      "imagen": "assets/productos/U426862.png",
       "cotizacion_base": "11673590",
       "fecha_cotizacion": "2026-02-25",
       "cantidad_referencia": 202,
       "archivo_fuente": "cotizacion_11673590.pdf",
       "precio_final_iva_incluido": 790,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "U426862",
+      "sku_imagen": "U426862"
     },
     {
       "codigo": "U393816",
@@ -1879,13 +2012,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Marcador Pizarra Punta Redonda Azul Cuerpo Blanc",
-      "imagen": "assets/productos/u393816-marcador-pizarra-punta-redonda-azul-cuerpo-blanc.jpg",
+      "imagen": "assets/productos/U393816.png",
       "cotizacion_base": "11739937",
       "fecha_cotizacion": "2026-03-19",
       "cantidad_referencia": 1,
       "archivo_fuente": "cotizacion_11739937.pdf",
       "precio_final_iva_incluido": 340,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "U393816",
+      "sku_imagen": "U393816"
     },
     {
       "codigo": "P110111",
@@ -1907,13 +2042,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Marcador Pizarra Punta Redonda Azul Desechable",
-      "imagen": "assets/productos/p110111-marcador-pizarra-punta-redonda-azul-desechable.jpg",
+      "imagen": "assets/productos/P110111.png",
       "cotizacion_base": "11739937",
       "fecha_cotizacion": "2026-03-19",
       "cantidad_referencia": 1,
       "archivo_fuente": "cotizacion_11739937.pdf",
       "precio_final_iva_incluido": 520,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "P110111",
+      "sku_imagen": "P110111"
     },
     {
       "codigo": "120375",
@@ -1935,13 +2072,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Marcador Pizarra Punta Redonda Azul Mod S70",
-      "imagen": "assets/productos/120375-marcador-pizarra-punta-redonda-azul-mod-s70.jpg",
+      "imagen": "assets/productos/120375.png",
       "cotizacion_base": "11739937",
       "fecha_cotizacion": "2026-03-19",
       "cantidad_referencia": 1,
       "archivo_fuente": "cotizacion_11739937.pdf",
       "precio_final_iva_incluido": 750,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "120375",
+      "sku_imagen": "120375"
     },
     {
       "codigo": "P128612",
@@ -1963,13 +2102,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Marcador Pizarra Punta Redonda Azul V Board Mast",
-      "imagen": "assets/productos/p128612-marcador-pizarra-punta-redonda-azul-v-board-mast.jpg",
+      "imagen": "assets/productos/P128612.png",
       "cotizacion_base": "11672476",
       "fecha_cotizacion": "2026-02-24",
       "cantidad_referencia": 48,
       "archivo_fuente": "cotizacion_11672476 (1).pdf",
       "precio_final_iva_incluido": 2010,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "P128612",
+      "sku_imagen": "P128612"
     },
     {
       "codigo": "496854",
@@ -1991,13 +2132,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Marcador Pizarra Punta Redonda Jumbo Rojo V Boar",
-      "imagen": "assets/productos/496854-marcador-pizarra-punta-redonda-jumbo-rojo-v-boar.jpg",
+      "imagen": "assets/productos/496854.png",
       "cotizacion_base": "11739937",
       "fecha_cotizacion": "2026-03-19",
       "cantidad_referencia": 1,
       "archivo_fuente": "cotizacion_11739937.pdf",
       "precio_final_iva_incluido": 4030,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "496854",
+      "sku_imagen": "496854"
     },
     {
       "codigo": "553431",
@@ -2019,13 +2162,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Marcador Pizarra Punta Redonda Negro",
-      "imagen": "assets/productos/553431-marcador-pizarra-punta-redonda-negro.jpg",
+      "imagen": "assets/productos/553431.png",
       "cotizacion_base": "11739937",
       "fecha_cotizacion": "2026-03-19",
       "cantidad_referencia": 1,
       "archivo_fuente": "cotizacion_11739937.pdf",
       "precio_final_iva_incluido": 730,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "553431",
+      "sku_imagen": "553431"
     },
     {
       "codigo": "U426864",
@@ -2047,13 +2192,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Marcador Pizarra Punta Redonda Negro",
-      "imagen": "assets/productos/u426864-marcador-pizarra-punta-redonda-negro.jpg",
+      "imagen": "assets/productos/U426864.png",
       "cotizacion_base": "11673590",
       "fecha_cotizacion": "2026-02-25",
       "cantidad_referencia": 492,
       "archivo_fuente": "cotizacion_11673590.pdf",
       "precio_final_iva_incluido": 680,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "U426864",
+      "sku_imagen": "U426864"
     },
     {
       "codigo": "U393815",
@@ -2075,13 +2222,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Marcador Pizarra Punta Redonda Negro Cuerpo Blan",
-      "imagen": "assets/productos/u393815-marcador-pizarra-punta-redonda-negro-cuerpo-blan.jpg",
+      "imagen": "assets/productos/U393815.png",
       "cotizacion_base": "11739937",
       "fecha_cotizacion": "2026-03-19",
       "cantidad_referencia": 1,
       "archivo_fuente": "cotizacion_11739937.pdf",
       "precio_final_iva_incluido": 340,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "U393815",
+      "sku_imagen": "U393815"
     },
     {
       "codigo": "P138514",
@@ -2103,13 +2252,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Marcador Pizarra Punta Redonda Negro V Board Mas",
-      "imagen": "assets/productos/p138514-marcador-pizarra-punta-redonda-negro-v-board-mas.jpg",
+      "imagen": "assets/productos/P138514.png",
       "cotizacion_base": "11672476",
       "fecha_cotizacion": "2026-02-24",
       "cantidad_referencia": 48,
       "archivo_fuente": "cotizacion_11672476 (1).pdf",
       "precio_final_iva_incluido": 2010,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "P138514",
+      "sku_imagen": "P138514"
     },
     {
       "codigo": "U426867",
@@ -2131,13 +2282,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Marcador Pizarra Punta Redonda Rojo",
-      "imagen": "assets/productos/u426867-marcador-pizarra-punta-redonda-rojo.jpg",
+      "imagen": "assets/productos/U426867.png",
       "cotizacion_base": "11673590",
       "fecha_cotizacion": "2026-02-25",
       "cantidad_referencia": 196,
       "archivo_fuente": "cotizacion_11673590.pdf",
       "precio_final_iva_incluido": 790,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "U426867",
+      "sku_imagen": "U426867"
     },
     {
       "codigo": "U393817",
@@ -2159,13 +2312,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Marcador Pizarra Punta Redonda Rojo Cuerpo Blanc",
-      "imagen": "assets/productos/u393817-marcador-pizarra-punta-redonda-rojo-cuerpo-blanc.jpg",
+      "imagen": "assets/productos/U393817.png",
       "cotizacion_base": "11739937",
       "fecha_cotizacion": "2026-03-19",
       "cantidad_referencia": 1,
       "archivo_fuente": "cotizacion_11739937.pdf",
       "precio_final_iva_incluido": 340,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "U393817",
+      "sku_imagen": "U393817"
     },
     {
       "codigo": "120376",
@@ -2187,13 +2342,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Marcador Pizarra Punta Redonda Rojo Mod S70",
-      "imagen": "assets/productos/120376-marcador-pizarra-punta-redonda-rojo-mod-s70.jpg",
+      "imagen": "assets/productos/120376.png",
       "cotizacion_base": "11739937",
       "fecha_cotizacion": "2026-03-19",
       "cantidad_referencia": 1,
       "archivo_fuente": "cotizacion_11739937.pdf",
       "precio_final_iva_incluido": 750,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "120376",
+      "sku_imagen": "120376"
     },
     {
       "codigo": "P138211",
@@ -2215,13 +2372,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Marcador Pizarra Punta Redonda Rojo V Board Mast",
-      "imagen": "assets/productos/p138211-marcador-pizarra-punta-redonda-rojo-v-board-mast.jpg",
+      "imagen": "assets/productos/P138211.png",
       "cotizacion_base": "11672476",
       "fecha_cotizacion": "2026-02-24",
       "cantidad_referencia": 48,
       "archivo_fuente": "cotizacion_11672476 (1).pdf",
       "precio_final_iva_incluido": 2010,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "P138211",
+      "sku_imagen": "P138211"
     },
     {
       "codigo": "P108918",
@@ -2243,13 +2402,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Marcador Pizarra Punta Redonda Verde Desechable",
-      "imagen": "assets/productos/p108918-marcador-pizarra-punta-redonda-verde-desechable.jpg",
+      "imagen": "assets/productos/P108918.png",
       "cotizacion_base": "11739937",
       "fecha_cotizacion": "2026-03-19",
       "cantidad_referencia": 1,
       "archivo_fuente": "cotizacion_11739937.pdf",
       "precio_final_iva_incluido": 360,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "P108918",
+      "sku_imagen": "P108918"
     },
     {
       "codigo": "P148510",
@@ -2271,13 +2432,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Marcador Pizarra Punta Redonda Verde V Board Mas",
-      "imagen": "assets/productos/p148510-marcador-pizarra-punta-redonda-verde-v-board-mas.jpg",
+      "imagen": "assets/productos/P148510.png",
       "cotizacion_base": "11739937",
       "fecha_cotizacion": "2026-03-19",
       "cantidad_referencia": 1,
       "archivo_fuente": "cotizacion_11739937.pdf",
       "precio_final_iva_incluido": 2190,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "P148510",
+      "sku_imagen": "P148510"
     },
     {
       "codigo": "P108110",
@@ -2299,13 +2462,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Marcador Pizarra Punta Redonda Violeta V Board M",
-      "imagen": "assets/productos/p108110-marcador-pizarra-punta-redonda-violeta-v-board-m.jpg",
+      "imagen": "assets/productos/P108110.png",
       "cotizacion_base": "11739937",
       "fecha_cotizacion": "2026-03-19",
       "cantidad_referencia": 1,
       "archivo_fuente": "cotizacion_11739937.pdf",
       "precio_final_iva_incluido": 2190,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "P108110",
+      "sku_imagen": "P108110"
     },
     {
       "codigo": "P108611",
@@ -2327,13 +2492,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Marcador Pizarra V Board Master Naranjo",
-      "imagen": "assets/productos/p108611-marcador-pizarra-v-board-master-naranjo.jpg",
+      "imagen": "assets/productos/P108611.png",
       "cotizacion_base": "11739937",
       "fecha_cotizacion": "2026-03-19",
       "cantidad_referencia": 1,
       "archivo_fuente": "cotizacion_11739937.pdf",
       "precio_final_iva_incluido": 2100,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "P108611",
+      "sku_imagen": "P108611"
     },
     {
       "codigo": "S200311",
@@ -2355,13 +2522,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Tinta Marcador Pizarra 30 Ml Azul Wbma-Tm/Tmc",
-      "imagen": "assets/productos/s200311-tinta-marcador-pizarra-30-ml-azul-wbma-tm-tmc.jpg",
+      "imagen": "assets/productos/S200311.png",
       "cotizacion_base": "11672476",
       "fecha_cotizacion": "2026-02-24",
       "cantidad_referencia": 60,
       "archivo_fuente": "cotizacion_11672476 (1).pdf",
       "precio_final_iva_incluido": 5350,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "S200311",
+      "sku_imagen": "S200311"
     },
     {
       "codigo": "S200304",
@@ -2383,13 +2552,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Tinta Marcador Pizarra 30 Ml Negro Wbma-Tm/Tmc",
-      "imagen": "assets/productos/s200304-tinta-marcador-pizarra-30-ml-negro-wbma-tm-tmc.jpg",
+      "imagen": "assets/productos/S200304.png",
       "cotizacion_base": "11672476",
       "fecha_cotizacion": "2026-02-24",
       "cantidad_referencia": 60,
       "archivo_fuente": "cotizacion_11672476 (1).pdf",
       "precio_final_iva_incluido": 5350,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "S200304",
+      "sku_imagen": "S200304"
     },
     {
       "codigo": "S200313",
@@ -2411,13 +2582,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Tinta Marcador Pizarra 30 Ml Rojo Wbma-Tm/Tmc",
-      "imagen": "assets/productos/s200313-tinta-marcador-pizarra-30-ml-rojo-wbma-tm-tmc.jpg",
+      "imagen": "assets/productos/S200313.png",
       "cotizacion_base": "11672476",
       "fecha_cotizacion": "2026-02-24",
       "cantidad_referencia": 60,
       "archivo_fuente": "cotizacion_11672476 (1).pdf",
       "precio_final_iva_incluido": 5350,
-      "categoria_cumplepatagonia": "escritura"
+      "categoria_cumplepatagonia": "escritura",
+      "sku": "S200313",
+      "sku_imagen": "S200313"
     },
     {
       "codigo": "U372899",
@@ -2439,13 +2612,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Adhesivo En Barra 21 Gr",
-      "imagen": "assets/productos/u372899-adhesivo-en-barra-21-gr.jpg",
+      "imagen": "assets/productos/U372899.png",
       "cotizacion_base": "11673548",
       "fecha_cotizacion": "2026-02-25",
       "cantidad_referencia": 5,
       "archivo_fuente": "cotizacion_11673548 (1).pdf",
       "precio_final_iva_incluido": 620,
-      "categoria_cumplepatagonia": "manualidades"
+      "categoria_cumplepatagonia": "manualidades",
+      "sku": "U372899",
+      "sku_imagen": "U372899"
     },
     {
       "codigo": "U430380",
@@ -2467,13 +2642,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Anotador Con Apretador Madera Oficio",
-      "imagen": "assets/productos/u430380-anotador-con-apretador-madera-oficio.jpg",
+      "imagen": "assets/productos/U430380.png",
       "cotizacion_base": "11672476",
       "fecha_cotizacion": "2026-02-24",
       "cantidad_referencia": 6,
       "archivo_fuente": "cotizacion_11672476 (1).pdf",
       "precio_final_iva_incluido": 1470,
-      "categoria_cumplepatagonia": "oficina"
+      "categoria_cumplepatagonia": "oficina",
+      "sku": "U430380",
+      "sku_imagen": "U430380"
     },
     {
       "codigo": "U600141",
@@ -2495,13 +2672,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Borrador De Pizarra Madera 40X130X13 Mm",
-      "imagen": "assets/productos/u600141-borrador-de-pizarra-madera-40x130x13-mm.jpg",
+      "imagen": "assets/productos/U600141.png",
       "cotizacion_base": "11672476",
       "fecha_cotizacion": "2026-02-24",
       "cantidad_referencia": 5,
       "archivo_fuente": "cotizacion_11672476 (1).pdf",
       "precio_final_iva_incluido": 870,
-      "categoria_cumplepatagonia": "oficina"
+      "categoria_cumplepatagonia": "oficina",
+      "sku": "U600141",
+      "sku_imagen": "U600141"
     },
     {
       "codigo": "S512824",
@@ -2523,13 +2702,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Clips N1 Redondo 33 Mm 100 Un",
-      "imagen": "assets/productos/s512824-clips-n1-redondo-33-mm-100-un.jpg",
+      "imagen": "assets/productos/S512824.png",
       "cotizacion_base": "11672476",
       "fecha_cotizacion": "2026-02-24",
       "cantidad_referencia": 3,
       "archivo_fuente": "cotizacion_11672476 (1).pdf",
       "precio_final_iva_incluido": 300,
-      "categoria_cumplepatagonia": "oficina"
+      "categoria_cumplepatagonia": "oficina",
+      "sku": "S512824",
+      "sku_imagen": "S512824"
     },
     {
       "codigo": "S500924",
@@ -2551,13 +2732,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Clips N1 Redondo 33 Mm 100 Un",
-      "imagen": "assets/productos/s500924-clips-n1-redondo-33-mm-100-un.jpg",
+      "imagen": "assets/productos/S500924.png",
       "cotizacion_base": "11674836",
       "fecha_cotizacion": "2026-02-26",
       "cantidad_referencia": 2,
       "archivo_fuente": "cotizacion_11674836 (3).pdf",
       "precio_final_iva_incluido": 400,
-      "categoria_cumplepatagonia": "oficina"
+      "categoria_cumplepatagonia": "oficina",
+      "sku": "S500924",
+      "sku_imagen": "S500924"
     },
     {
       "codigo": "R509226",
@@ -2579,13 +2762,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Corchete Estandar 26/06 5000 Un",
-      "imagen": "assets/productos/r509226-corchete-estandar-26-06-5000-un.jpg",
+      "imagen": "assets/productos/R509226.png",
       "cotizacion_base": "11672476",
       "fecha_cotizacion": "2026-02-24",
       "cantidad_referencia": 4,
       "archivo_fuente": "cotizacion_11672476 (1).pdf",
       "precio_final_iva_incluido": 940,
-      "categoria_cumplepatagonia": "oficina"
+      "categoria_cumplepatagonia": "oficina",
+      "sku": "R509226",
+      "sku_imagen": "R509226"
     },
     {
       "codigo": "R583724",
@@ -2607,13 +2792,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Corchetera Corta Metalica B440",
-      "imagen": "assets/productos/r583724-corchetera-corta-metalica-b440.jpg",
+      "imagen": "assets/productos/R583724.png",
       "cotizacion_base": "11672476",
       "fecha_cotizacion": "2026-02-24",
       "cantidad_referencia": 4,
       "archivo_fuente": "cotizacion_11672476 (1).pdf",
       "precio_final_iva_incluido": 12350,
-      "categoria_cumplepatagonia": "oficina"
+      "categoria_cumplepatagonia": "oficina",
+      "sku": "R583724",
+      "sku_imagen": "R583724"
     },
     {
       "codigo": "543009",
@@ -2635,13 +2822,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Corchetera Larga Metalica 30 Hojas",
-      "imagen": "assets/productos/543009-corchetera-larga-metalica-30-hojas.jpg",
+      "imagen": "assets/productos/543009.png",
       "cotizacion_base": "11673548",
       "fecha_cotizacion": "2026-02-25",
       "cantidad_referencia": 1,
       "archivo_fuente": "cotizacion_11673548 (1).pdf",
       "precio_final_iva_incluido": 3740,
-      "categoria_cumplepatagonia": "oficina"
+      "categoria_cumplepatagonia": "oficina",
+      "sku": "543009",
+      "sku_imagen": "543009"
     },
     {
       "codigo": "S502904",
@@ -2663,13 +2852,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Doble Clip 25 Mm 12 Un Negro",
-      "imagen": "assets/productos/s502904-doble-clip-25-mm-12-un-negro.jpg",
+      "imagen": "assets/productos/S502904.png",
       "cotizacion_base": "11672476",
       "fecha_cotizacion": "2026-02-24",
       "cantidad_referencia": 7,
       "archivo_fuente": "cotizacion_11672476 (1).pdf",
       "precio_final_iva_incluido": 630,
-      "categoria_cumplepatagonia": "oficina"
+      "categoria_cumplepatagonia": "oficina",
+      "sku": "S502904",
+      "sku_imagen": "S502904"
     },
     {
       "codigo": "S503104",
@@ -2691,13 +2882,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Doble Clip 41 Mm 12 Un Negro",
-      "imagen": "assets/productos/s503104-doble-clip-41-mm-12-un-negro.jpg",
+      "imagen": "assets/productos/S503104.png",
       "cotizacion_base": "11673590",
       "fecha_cotizacion": "2026-02-25",
       "cantidad_referencia": 65,
       "archivo_fuente": "cotizacion_11673590.pdf",
       "precio_final_iva_incluido": 1580,
-      "categoria_cumplepatagonia": "oficina"
+      "categoria_cumplepatagonia": "oficina",
+      "sku": "S503104",
+      "sku_imagen": "S503104"
     },
     {
       "codigo": "S503204",
@@ -2719,13 +2912,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Doble Clip 51 Mm 12 Un Negro",
-      "imagen": "assets/productos/s503204-doble-clip-51-mm-12-un-negro.jpg",
+      "imagen": "assets/productos/S503204.png",
       "cotizacion_base": "11672476",
       "fecha_cotizacion": "2026-02-24",
       "cantidad_referencia": 7,
       "archivo_fuente": "cotizacion_11672476 (1).pdf",
       "precio_final_iva_incluido": 2170,
-      "categoria_cumplepatagonia": "oficina"
+      "categoria_cumplepatagonia": "oficina",
+      "sku": "S503204",
+      "sku_imagen": "S503204"
     },
     {
       "codigo": "U600325",
@@ -2747,13 +2942,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Porta Clips Magnetico Cuadrado Colores",
-      "imagen": "assets/productos/u600325-porta-clips-magnetico-cuadrado-colores.jpg",
+      "imagen": "assets/productos/U600325.png",
       "cotizacion_base": "11673590",
       "fecha_cotizacion": "2026-02-25",
       "cantidad_referencia": 32,
       "archivo_fuente": "cotizacion_11673590.pdf",
       "precio_final_iva_incluido": 1110,
-      "categoria_cumplepatagonia": "oficina"
+      "categoria_cumplepatagonia": "oficina",
+      "sku": "U600325",
+      "sku_imagen": "U600325"
     },
     {
       "codigo": "R582224",
@@ -2775,13 +2972,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Sacacorchete Pinza",
-      "imagen": "assets/productos/r582224-sacacorchete-pinza.jpg",
+      "imagen": "assets/productos/R582224.png",
       "cotizacion_base": "11674836",
       "fecha_cotizacion": "2026-02-26",
       "cantidad_referencia": 20,
       "archivo_fuente": "cotizacion_11674836 (3).pdf",
       "precio_final_iva_incluido": 500,
-      "categoria_cumplepatagonia": "oficina"
+      "categoria_cumplepatagonia": "oficina",
+      "sku": "R582224",
+      "sku_imagen": "R582224"
     },
     {
       "codigo": "H200520",
@@ -2803,13 +3002,15 @@
       "moneda": "CLP",
       "estado": "activo",
       "descripcion": "Block Prepicado Carta 80 Hojas 7 Mm",
-      "imagen": "assets/productos/h200520-block-prepicado-carta-80-hojas-7-mm.jpg",
+      "imagen": "assets/productos/H200520.png",
       "cotizacion_base": "11672476",
       "fecha_cotizacion": "2026-02-24",
       "cantidad_referencia": 25,
       "archivo_fuente": "cotizacion_11672476 (1).pdf",
       "precio_final_iva_incluido": 2040,
-      "categoria_cumplepatagonia": "papeleria"
+      "categoria_cumplepatagonia": "papeleria",
+      "sku": "H200520",
+      "sku_imagen": "H200520"
     }
   ]
 }
