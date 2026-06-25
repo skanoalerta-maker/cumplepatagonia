@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Librería | CumplePatagonia</title>
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+
+    body{
+      font-family:Arial,sans-serif;
+      background:#f7f7fb;
+      color:#222;
+    }
+
+    header{
+      background:linear-gradient(135deg,#5b2cff,#e91e63);
+      color:white;
+      padding:34px 6%;
+    }
+
+    .top{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .logo{
+      font-size:30px;
+      font-weight:900;
+    }
+
+    .logo span{color:#ffd84d}
+
+    .back{
+      color:white;
+      text-decoration:none;
+      font-weight:900;
+      background:rgba(255,255,255,.18);
+      padding:10px 16px;
+      border-radius:999px;
+    }
+
+    .hero{
+      padding:45px 6%;
+      background:linear-gradient(135deg,#fff0f7,#eef2ff);
+      text-align:center;
+    }
+
+    .hero h1{
+      font-size:44px;
+      margin-bottom:14px;
+      color:#26144d;
+    }
+
+    .hero p{
+      max-width:760px;
+      margin:auto;
+      font-size:18px;
+      line-height:1.6;
+      color:#555;
+    }
+
+    .search-box{
+      max-width:760px;
+      margin:28px auto 0;
+      display:flex;
+      gap:10px;
+      background:white;
+      padding:10px;
+      border-radius:18px;
+      box-shadow:0 10px 28px rgba(0,0,0,.08);
+    }
+
+    .search-box input{
+      flex:1;
+      border:none;
+      outline:none;
+      font-size:16px;
+      padding:14px;
+    }
+
+    .search-box button{
+      border:none;
+      background:#25d366;
+      color:white;
+      font-weight:900;
+      padding:0 22px;
+      border-radius:14px;
+      cursor:pointer;
+    }
+
+    .categorias{
+      padding:35px 6% 10px;
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      justify-content:center;
+    }
+
+    .cat-btn{
+      border:none;
+      background:white;
+      color:#333;
+      padding:12px 18px;
+      border-radius:999px;
+      font-weight:900;
+      cursor:pointer;
+      box-shadow:0 8px 22px rgba(0,0,0,.07);
+    }
+
+    .cat-btn.active{
+      background:#5b2cff;
+      color:white;
+    }
+
+    .catalogo{
+      padding:30px 6% 70px;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:22px;
+    }
+
+    .producto{
+      background:white;
+      border-radius:22px;
+      overflow:hidden;
+      box-shadow:0 12px 30px rgba(0,0,0,.08);
+      display:flex;
+      flex-direction:column;
+    }
+
+    .producto-img{
+      height:150px;
+      background:linear-gradient(135deg,#efe9ff,#ffe4f1);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:52px;
+    }
+
+    .producto-body{
+      padding:18px;
+      flex:1;
+    }
+
+    .producto-body h3{
+      font-size:16px;
+      margin-bottom:8px;
+      color:#222;
+      line-height:1.3;
+    }
+
+    .marca{
+      font-size:13px;
+      color:#777;
+      margin-bottom:10px;
+    }
+
+    .precio{
+      font-size:22px;
+      font-weight:900;
+      color:#e91e63;
+      margin-bottom:14px;
+    }
+
+    .whatsapp-btn{
+      display:block;
+      text-align:center;
+      background:#25d366;
+      color:white;
+      text-decoration:none;
+      font-weight:900;
+      padding:12px;
+      border-radius:14px;
+    }
+
+    footer{
+      background:#151515;
+      color:white;
+      text-align:center;
+      padding:28px 6%;
+    }
+
+    @media(max-width:700px){
+      .hero h1{font-size:34px}
+      .search-box{flex-direction:column}
+      .search-box button{padding:14px}
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="top">
+    <div class="logo">Cumple<span>Patagonia</span></div>
+    <a class="back" href="../">← Volver al inicio</a>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>📚 Librería y papelería</h1>
+  <p>
+    Útiles escolares, artículos de escritorio, cuadernos, lápices, carpetas,
+    marcadores, papelería y productos de oficina disponibles en Punta Arenas.
+  </p>
+
+  <div class="search-box">
+    <input id="buscador" type="text" placeholder="Buscar cuadernos, lápices, carpetas...">
+    <button onclick="filtrarProductos()">Buscar</button>
+  </div>
+</section>
+
+<div class="categorias">
+  <button class="cat-btn active" onclick="filtrarCategoria('todos', this)">Todos</button>
+  <button class="cat-btn" onclick="filtrarCategoria('escolar', this)">📓 Escolar</button>
+  <button class="cat-btn" onclick="filtrarCategoria('escritura', this)">✏️ Escritura</button>
+  <button class="cat-btn" onclick="filtrarCategoria('papel', this)">📄 Papel</button>
+  <button class="cat-btn" onclick="filtrarCategoria('archivo', this)">📁 Archivo</button>
+  <button class="cat-btn" onclick="filtrarCategoria('manualidades', this)">🎨 Manualidades</button>
+  <button class="cat-btn" onclick="filtrarCategoria('oficina', this)">🏢 Oficina</button>
+</div>
+
+<section class="catalogo" id="catalogo"></section>
+
+<footer>
+  <p><strong>CumplePatagonia</strong></p>
+  <p>Librería · Papelería · Punta Arenas</p>
+</footer>
+
+<script>
+  const productos = [
+    {
+      nombre: "Cuaderno universitario matemática 100 hojas",
+      marca: "Torre",
+      categoria: "escolar",
+      precio: 1841,
+      icono: "📓"
+    },
+    {
+      nombre: "Lápiz pasta azul punta media",
+      marca: "Fultons",
+      categoria: "escritura",
+      precio: 108,
+      icono: "✏️"
+    },
+    {
+      nombre: "Adhesivo en barra 21 gr",
+      marca: "Torre",
+      categoria: "manualidades",
+      precio: 619,
+      icono: "🧴"
+    },
+    {
+      nombre: "Carpeta con elástico cartulina azul",
+      marca: "Lavoro",
+      categoria: "archivo",
+      precio: 797,
+      icono: "📁"
+    },
+    {
+      nombre: "Block dibujo 1/8 medio 20 hojas",
+      marca: "Artel",
+      categoria: "papel",
+      precio: 2272,
+      icono: "📄"
+    },
+    {
+      nombre: "Corchetera larga metálica 30 hojas",
+      marca: "Lavoro",
+      categoria: "oficina",
+      precio: 3739,
+      icono: "📌"
+    }
+  ];
+
+  let categoriaActual = "todos";
+
+  function formatoPrecio(valor){
+    return "$" + valor.toLocaleString("es-CL");
+  }
+
+  function render(lista){
+    const contenedor = document.getElementById("catalogo");
+    contenedor.innerHTML = "";
+
+    lista.forEach(p => {
+      const mensaje = encodeURIComponent(
+        `Hola CumplePatagonia, quiero consultar por: ${p.nombre}`
+      );
+
+      contenedor.innerHTML += `
+        <div class="producto">
+          <div class="producto-img">${p.icono}</div>
+          <div class="producto-body">
+            <h3>${p.nombre}</h3>
+            <div class="marca">${p.marca}</div>
+            <div class="precio">${formatoPrecio(p.precio)}</div>
+            <a class="whatsapp-btn" href="https://wa.me/56912345678?text=${mensaje}">
+              Pedir por WhatsApp
+            </a>
+          </div>
+        </div>
+      `;
+    });
+  }
+
+  function filtrarCategoria(cat, boton){
+    categoriaActual = cat;
+
+    document.querySelectorAll(".cat-btn").forEach(b => b.classList.remove("active"));
+    boton.classList.add("active");
+
+    filtrarProductos();
+  }
+
+  function filtrarProductos(){
+    const texto = document.getElementById("buscador").value.toLowerCase();
+
+    const filtrados = productos.filter(p => {
+      const coincideTexto = p.nombre.toLowerCase().includes(texto) || p.marca.toLowerCase().includes(texto);
+      const coincideCategoria = categoriaActual === "todos" || p.categoria === categoriaActual;
+      return coincideTexto && coincideCategoria;
+    });
+
+    render(filtrados);
+  }
+
+  render(productos);
+</script>
+
+</body>
+</html>
