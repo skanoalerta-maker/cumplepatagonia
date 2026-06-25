@@ -15,19 +15,36 @@
       overflow-x:hidden;
     }
 
-    body::before{
-      content:"✏️ 📓 📎 🖍️ 📄 ✂️ 📚 🧴 ✏️ 📘 📌 🖊️ 📎 📒";
-      position:fixed;
-      inset:0;
-      font-size:42px;
-      line-height:120px;
-      letter-spacing:38px;
-      opacity:.055;
-      z-index:-1;
-      transform:rotate(-10deg);
-      pointer-events:none;
-      white-space:pre-wrap;
-    }
+.hero{
+  padding:55px 6%;
+  background:
+    radial-gradient(circle at 10% 20%, rgba(233,30,99,.12), transparent 28%),
+    radial-gradient(circle at 90% 20%, rgba(91,44,255,.14), transparent 30%),
+    linear-gradient(135deg,#fff0f7,#eef2ff);
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+
+.hero::before{
+  content:"✏️";
+  position:absolute;
+  left:8%;
+  top:35px;
+  font-size:70px;
+  opacity:.22;
+  transform:rotate(-20deg);
+}
+
+.hero::after{
+  content:"📓";
+  position:absolute;
+  right:9%;
+  bottom:28px;
+  font-size:78px;
+  opacity:.20;
+  transform:rotate(15deg);
+}
 
     header{
       background:linear-gradient(135deg,#5b2cff,#e91e63);
