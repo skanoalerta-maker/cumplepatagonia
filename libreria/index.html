@@ -492,9 +492,13 @@
     .precio-row{
       display:flex;
       justify-content:space-between;
-      align-items:center;
+      align-items:flex-end;
       gap:12px;
-      margin-bottom:16px;
+      margin-bottom:14px;
+      background:#f8f9ff;
+      border:1px solid var(--linea);
+      border-radius:18px;
+      padding:14px;
     }
 
     .precio{
@@ -504,14 +508,19 @@
     }
 
     .precio-neto{
+      display:inline-flex;
+      margin-top:6px;
       font-size:12px;
       font-weight:900;
-      color:#66708a;
-      margin-top:4px;
+      color:#5b2cff;
+      background:rgba(91,44,255,.09);
+      padding:5px 9px;
+      border-radius:999px;
       letter-spacing:.2px;
     }
 
     .pedido-resumen{
+      margin-left:auto;
       display:flex;
       align-items:center;
       gap:14px;
@@ -562,17 +571,61 @@
       border:1px solid rgba(255,255,255,.24);
     }
 
+    .producto-acciones{
+      display:grid;
+      grid-template-columns:118px 1fr;
+      gap:12px;
+      align-items:center;
+      margin-top:auto;
+    }
+
+    .cantidad-control{
+      height:48px;
+      display:grid;
+      grid-template-columns:36px 1fr 36px;
+      border:1px solid #dfe5f1;
+      border-radius:14px;
+      overflow:hidden;
+      background:white;
+    }
+
+    .cantidad-control button{
+      border:none;
+      background:#f3f6fb;
+      color:var(--azul);
+      font-size:20px;
+      font-weight:900;
+      cursor:pointer;
+    }
+
+    .cantidad-control input{
+      width:100%;
+      border:none;
+      outline:none;
+      text-align:center;
+      color:var(--azul);
+      font-size:16px;
+      font-weight:900;
+      appearance:textfield;
+    }
+
+    .cantidad-control input::-webkit-outer-spin-button,
+    .cantidad-control input::-webkit-inner-spin-button{
+      -webkit-appearance:none;
+      margin:0;
+    }
+
     .agregar-btn{
       width:100%;
-      margin-top:auto;
+      height:48px;
       border:none;
       background:linear-gradient(135deg,var(--morado),var(--rosado));
       color:white;
       font-weight:900;
-      padding:13px 14px;
+      padding:0 14px;
       border-radius:15px;
       cursor:pointer;
-      box-shadow:0 9px 20px rgba(91,44,255,.20);
+      box-shadow:0 9px 20px rgba(91,44,255,.22);
       transition:.2s ease;
     }
 
@@ -592,7 +645,7 @@
     }
 
     .whatsapp-btn{
-      margin-top:auto;
+      margin-top:12px;
       display:block;
       text-align:center;
       background:var(--verde);
@@ -648,6 +701,7 @@
       .categorias{grid-template-columns:repeat(2,1fr)}
       .promo{flex-direction:column;align-items:flex-start}
       .pedido-resumen{justify-content:flex-start;width:100%}
+      .producto-acciones{grid-template-columns:1fr}
       .catalogo{grid-template-columns:1fr;gap:24px}
       .producto-img{height:235px}
     }
@@ -849,9 +903,17 @@ function render(lista){
             <div class="unidad">${unidad}</div>
           </div>
 
-          <button class="agregar-btn" type="button" data-codigo="${codigo}" data-nombre="${nombre}" data-marca="${marca}" data-precio="${precio}">
-            Agregar al pedido
-          </button>
+          <div class="producto-acciones">
+            <div class="cantidad-control">
+              <button type="button" class="qty-btn" data-action="menos">−</button>
+              <input class="qty-input" type="number" min="1" value="1" aria-label="Cantidad">
+              <button type="button" class="qty-btn" data-action="mas">+</button>
+            </div>
+
+            <button class="agregar-btn" type="button" data-codigo="${codigo}" data-nombre="${nombre}" data-marca="${marca}" data-precio="${precio}">
+              Agregar
+            </button>
+          </div>
 
           <a class="whatsapp-btn" href="https://wa.me/${whatsappCumplePatagonia}?text=${mensaje}" target="_blank">
             Pedir por WhatsApp
@@ -898,17 +960,18 @@ function filtrarProductos(){
 
 function agregarPedido(producto){
   const codigo = producto.codigo || "Sin código";
+  const cantidad = Math.max(1, Number(producto.cantidad || 1));
   const existente = pedido.find(item => item.codigo === codigo && item.nombre === producto.nombre);
 
   if(existente){
-    existente.cantidad += 1;
+    existente.cantidad += cantidad;
   }else{
     pedido.push({
       codigo,
       nombre: producto.nombre || "Producto",
       marca: producto.marca || "",
       precio: Number(producto.precio || 0),
-      cantidad: 1
+      cantidad: cantidad
     });
   }
 
@@ -949,15 +1012,43 @@ function vaciarPedido(){
 }
 
 document.getElementById("catalogo").addEventListener("click", function(e){
+  const qtyBtn = e.target.closest(".qty-btn");
+
+  if(qtyBtn){
+    const card = qtyBtn.closest(".producto");
+    const input = card.querySelector(".qty-input");
+    let valor = Math.max(1, Number(input.value || 1));
+
+    if(qtyBtn.dataset.action === "mas") valor += 1;
+    if(qtyBtn.dataset.action === "menos") valor = Math.max(1, valor - 1);
+
+    input.value = valor;
+    return;
+  }
+
   const boton = e.target.closest(".agregar-btn");
   if(!boton) return;
+
+  const card = boton.closest(".producto");
+  const input = card.querySelector(".qty-input");
+  const cantidad = Math.max(1, Number(input.value || 1));
 
   agregarPedido({
     codigo: boton.dataset.codigo,
     nombre: boton.dataset.nombre,
     marca: boton.dataset.marca,
-    precio: boton.dataset.precio
+    precio: boton.dataset.precio,
+    cantidad: cantidad
   });
+
+  boton.textContent = "Agregado";
+  setTimeout(() => boton.textContent = "Agregar", 900);
+});
+
+document.getElementById("catalogo").addEventListener("input", function(e){
+  const input = e.target.closest(".qty-input");
+  if(!input) return;
+  input.value = Math.max(1, Number(input.value || 1));
 });
 
 document.getElementById("buscador").addEventListener("input", filtrarProductos);
