@@ -10,16 +10,24 @@
 
     :root{
       --morado:#5b2cff;
+      --morado-oscuro:#24145f;
       --rosado:#e91e63;
       --verde:#25d366;
-      --azul-oscuro:#17124a;
-      --texto:#222;
-      --suave:#f7f7fb;
+      --azul:#15224b;
+      --texto:#182033;
+      --muted:#66708a;
+      --fondo:#f4f6fb;
+      --card:#ffffff;
+      --linea:#e8ecf5;
+      --sombra:0 18px 45px rgba(20,25,55,.10);
     }
 
     body{
       font-family:Arial,sans-serif;
-      background:#f7f7fb;
+      background:
+        radial-gradient(circle at 8% 12%, rgba(91,44,255,.08), transparent 28%),
+        radial-gradient(circle at 92% 20%, rgba(233,30,99,.07), transparent 26%),
+        linear-gradient(180deg,#f8f9ff 0%,#f2f5fb 100%);
       color:var(--texto);
       overflow-x:hidden;
     }
@@ -27,7 +35,10 @@
     header{
       background:linear-gradient(135deg,var(--morado),var(--rosado));
       color:white;
-      padding:28px 6%;
+      padding:26px 6%;
+      position:relative;
+      z-index:5;
+      box-shadow:0 10px 35px rgba(36,20,95,.16);
     }
 
     .top{
@@ -43,7 +54,7 @@
     .logo{
       font-size:30px;
       font-weight:900;
-      letter-spacing:-.5px;
+      letter-spacing:-.7px;
     }
 
     .logo span{color:#ffd84d}
@@ -56,124 +67,96 @@
       padding:11px 18px;
       border-radius:999px;
       box-shadow:0 10px 22px rgba(0,0,0,.10);
+      transition:.2s ease;
     }
 
+    .back:hover{background:rgba(255,255,255,.26)}
+
     .hero{
-      min-height:360px;
-      padding:56px 6% 68px;
-      background:
-        radial-gradient(circle at 12% 20%, rgba(233,30,99,.16), transparent 30%),
-        radial-gradient(circle at 88% 18%, rgba(91,44,255,.18), transparent 32%),
-        linear-gradient(135deg,#fff0f7,#eef2ff);
-      text-align:center;
+      padding:58px 6% 48px;
       position:relative;
       overflow:hidden;
+      background:
+        linear-gradient(135deg,rgba(255,255,255,.94),rgba(246,241,255,.92)),
+        repeating-linear-gradient(135deg,rgba(91,44,255,.035) 0 1px,transparent 1px 18px);
+      border-bottom:1px solid var(--linea);
     }
 
     .hero::before{
       content:"";
       position:absolute;
-      left:-20px;
-      bottom:-10px;
-      width:280px;
-      height:210px;
+      inset:0;
       background:
-        linear-gradient(0deg,#2667ff 0 26%,transparent 26% 34%,#ff4fa3 34% 60%,transparent 60% 68%,#7a45ff 68% 100%);
-      border-radius:18px 18px 12px 12px;
-      transform:rotate(-6deg);
-      box-shadow:0 20px 50px rgba(91,44,255,.18);
-      opacity:.82;
+        radial-gradient(circle at 16% 22%, rgba(233,30,99,.13), transparent 22%),
+        radial-gradient(circle at 84% 18%, rgba(91,44,255,.12), transparent 24%),
+        radial-gradient(circle at 70% 95%, rgba(37,211,102,.08), transparent 20%);
+      pointer-events:none;
     }
 
     .hero::after{
       content:"";
       position:absolute;
-      right:-22px;
-      bottom:-12px;
-      width:280px;
-      height:210px;
-      background:
-        linear-gradient(0deg,#ffb632 0 28%,transparent 28% 36%,#ff4fa3 36% 62%,transparent 62% 70%,#2667ff 70% 100%);
-      border-radius:18px 18px 12px 12px;
-      transform:rotate(6deg);
-      box-shadow:0 20px 50px rgba(233,30,99,.16);
-      opacity:.82;
-    }
-
-    .decor{
-      position:absolute;
-      pointer-events:none;
-      z-index:0;
-    }
-
-    .lapiz{
-      width:135px;
-      height:22px;
-      border-radius:14px;
-      background:linear-gradient(90deg,#6b44ff 0 15%,#f5d67d 15% 28%,#ffca3a 28% 83%,#f6f0d0 83% 92%,#3e2d29 92% 100%);
-      box-shadow:0 10px 22px rgba(0,0,0,.10);
-    }
-
-    .lapiz.rosa{
-      background:linear-gradient(90deg,#6b44ff 0 15%,#f5d67d 15% 28%,#ff5aad 28% 83%,#f6f0d0 83% 92%,#3e2d29 92% 100%);
-    }
-
-    .lapiz.azul{
-      background:linear-gradient(90deg,#ff5aad 0 15%,#f5d67d 15% 28%,#6b44ff 28% 83%,#f6f0d0 83% 92%,#3e2d29 92% 100%);
-    }
-
-    .d1{left:62px;top:58px;transform:rotate(55deg)}
-    .d2{left:225px;top:85px;transform:rotate(-50deg)}
-    .d3{left:290px;bottom:82px;transform:rotate(22deg)}
-    .d4{right:260px;top:115px;transform:rotate(54deg)}
-    .d5{right:56px;top:80px;transform:rotate(-58deg)}
-    .d6{right:300px;bottom:70px;transform:rotate(-25deg)}
-
-    .punto{
-      width:18px;
-      height:18px;
+      left:50%;
+      bottom:-120px;
+      width:900px;
+      height:260px;
+      transform:translateX(-50%);
+      background:linear-gradient(90deg,rgba(91,44,255,.08),rgba(233,30,99,.08));
       border-radius:50%;
-      background:#ff5aad;
-      opacity:.75;
+      filter:blur(18px);
+      pointer-events:none;
     }
 
-    .p1{left:16%;top:26%}
-    .p2{left:36%;bottom:22%;background:#9b7cff}
-    .p3{right:25%;top:25%;background:#ffd84d}
-    .p4{right:13%;top:32%}
-    .p5{left:19%;bottom:32%}
-
-    .hero-content{
+    .hero-wrap{
+      max-width:1180px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:34px;
+      align-items:center;
       position:relative;
       z-index:1;
-      max-width:880px;
-      margin:auto;
+    }
+
+    .hero-copy .tag{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      color:var(--morado-oscuro);
+      background:white;
+      border:1px solid rgba(91,44,255,.14);
+      padding:9px 14px;
+      border-radius:999px;
+      font-weight:900;
+      box-shadow:0 10px 25px rgba(20,25,55,.06);
+      margin-bottom:18px;
     }
 
     .hero h1{
-      font-size:46px;
+      font-size:48px;
+      line-height:1.08;
+      color:var(--azul);
+      letter-spacing:-1.5px;
       margin-bottom:16px;
-      color:var(--azul-oscuro);
-      letter-spacing:-1px;
     }
 
     .hero p{
-      max-width:760px;
-      margin:auto;
+      max-width:720px;
       font-size:18px;
-      line-height:1.6;
-      color:#333a55;
+      line-height:1.65;
+      color:#3c465f;
+      margin-bottom:26px;
     }
 
     .search-box{
       max-width:760px;
-      margin:28px auto 0;
       display:flex;
       gap:10px;
       background:white;
       padding:10px;
       border-radius:18px;
-      box-shadow:0 14px 36px rgba(0,0,0,.10);
+      box-shadow:var(--sombra);
+      border:1px solid rgba(91,44,255,.08);
     }
 
     .search-box input{
@@ -182,6 +165,7 @@
       outline:none;
       font-size:16px;
       padding:14px;
+      color:#26314c;
     }
 
     .search-box button{
@@ -192,84 +176,279 @@
       padding:0 24px;
       border-radius:14px;
       cursor:pointer;
-      box-shadow:0 8px 18px rgba(37,211,102,.22);
+      box-shadow:0 8px 18px rgba(37,211,102,.24);
+    }
+
+    .hero-panel{
+      background:rgba(255,255,255,.86);
+      border:1px solid rgba(91,44,255,.10);
+      border-radius:28px;
+      padding:24px;
+      box-shadow:var(--sombra);
+      backdrop-filter:blur(10px);
+    }
+
+    .panel-title{
+      color:var(--azul);
+      font-size:20px;
+      font-weight:900;
+      margin-bottom:12px;
+    }
+
+    .panel-text{
+      color:var(--muted);
+      line-height:1.55;
+      margin-bottom:18px;
+      font-size:15px;
+    }
+
+    .mini-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:12px;
+    }
+
+    .mini-card{
+      background:#f8f9ff;
+      border:1px solid var(--linea);
+      padding:15px;
+      border-radius:18px;
+    }
+
+    .mini-card strong{
+      display:block;
+      color:var(--azul);
+      font-size:20px;
+      margin-bottom:3px;
+    }
+
+    .mini-card span{
+      color:var(--muted);
+      font-size:13px;
+      font-weight:700;
+    }
+
+    .beneficios{
+      max-width:1180px;
+      margin:28px auto 0;
+      padding:0 6%;
+      position:relative;
+      z-index:2;
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:16px;
+    }
+
+    .beneficio{
+      background:white;
+      border:1px solid var(--linea);
+      border-radius:20px;
+      padding:18px;
+      box-shadow:0 12px 30px rgba(20,25,55,.06);
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
+    .beneficio-icon{
+      width:42px;
+      height:42px;
+      border-radius:14px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:linear-gradient(135deg,rgba(91,44,255,.10),rgba(233,30,99,.10));
+      color:var(--morado);
+      font-weight:900;
+      flex:0 0 auto;
+    }
+
+    .beneficio strong{
+      display:block;
+      color:var(--azul);
+      font-size:14px;
+      margin-bottom:3px;
+    }
+
+    .beneficio span{
+      color:var(--muted);
+      font-size:12px;
+      font-weight:700;
+    }
+
+    .section-wrap{
+      max-width:1180px;
+      margin:38px auto 0;
+      padding:0 6%;
     }
 
     .categorias{
-      padding:42px 6% 16px;
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-      justify-content:center;
+      display:grid;
+      grid-template-columns:repeat(6,1fr);
+      gap:14px;
+      margin-bottom:34px;
     }
 
     .cat-btn{
       border:none;
       background:white;
       color:#222a44;
-      padding:12px 18px;
-      border-radius:999px;
+      padding:16px 14px;
+      border-radius:20px;
       font-weight:900;
       cursor:pointer;
-      box-shadow:0 8px 22px rgba(0,0,0,.07);
+      box-shadow:0 10px 26px rgba(20,25,55,.06);
+      border:1px solid var(--linea);
+      transition:.2s ease;
+      min-height:76px;
     }
 
-    .cat-btn.active{
-      background:var(--morado);
+    .cat-btn small{
+      display:block;
+      margin-top:4px;
+      color:var(--muted);
+      font-weight:700;
+      font-size:11px;
+    }
+
+    .cat-btn.active,
+    .cat-btn:hover{
+      background:linear-gradient(135deg,var(--morado),var(--rosado));
       color:white;
+      transform:translateY(-2px);
+      border-color:transparent;
+    }
+
+    .cat-btn.active small,
+    .cat-btn:hover small{color:rgba(255,255,255,.82)}
+
+    .promo{
+      background:linear-gradient(135deg,var(--azul),var(--morado-oscuro));
+      color:white;
+      border-radius:26px;
+      padding:26px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:20px;
+      box-shadow:var(--sombra);
+      margin-bottom:34px;
+      overflow:hidden;
+      position:relative;
+    }
+
+    .promo::after{
+      content:"";
+      position:absolute;
+      right:-80px;
+      top:-90px;
+      width:260px;
+      height:260px;
+      border-radius:50%;
+      background:rgba(255,255,255,.08);
+    }
+
+    .promo h2{
+      font-size:26px;
+      margin-bottom:8px;
+      letter-spacing:-.5px;
+    }
+
+    .promo p{
+      color:rgba(255,255,255,.78);
+      line-height:1.5;
+    }
+
+    .promo a{
+      color:var(--azul);
+      background:#ffd84d;
+      text-decoration:none;
+      padding:14px 18px;
+      border-radius:999px;
+      font-weight:900;
+      white-space:nowrap;
+      position:relative;
+      z-index:1;
     }
 
     .titulo-catalogo{
-      text-align:center;
-      color:var(--azul-oscuro);
-      font-size:26px;
-      margin:22px 6% 8px;
-      font-weight:900;
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      gap:18px;
+      margin:0 0 24px;
     }
 
-    .linea{
-      width:58px;
-      height:4px;
-      border-radius:99px;
-      background:linear-gradient(90deg,var(--rosado),var(--morado));
-      margin:0 auto 30px;
+    .titulo-catalogo h2{
+      color:var(--azul);
+      font-size:30px;
+      font-weight:900;
+      letter-spacing:-.7px;
+    }
+
+    .titulo-catalogo p{
+      color:var(--muted);
+      font-weight:700;
+      line-height:1.45;
+      max-width:480px;
+      text-align:right;
     }
 
     .catalogo{
-      padding:0 1cm 76px;
       display:grid;
       grid-template-columns:repeat(3, minmax(0,1fr));
       gap:1cm;
-      max-width:1180px;
-      margin:auto;
+      padding-bottom:76px;
     }
 
     .producto{
       background:white;
-      border-radius:22px;
+      border-radius:24px;
       overflow:hidden;
-      box-shadow:0 14px 34px rgba(0,0,0,.08);
+      box-shadow:0 16px 40px rgba(20,25,55,.08);
       display:flex;
       flex-direction:column;
-      min-height:430px;
-      border:1px solid rgba(91,44,255,.06);
+      min-height:455px;
+      border:1px solid var(--linea);
+      transition:.2s ease;
+      position:relative;
+    }
+
+    .producto:hover{
+      transform:translateY(-4px);
+      box-shadow:0 22px 52px rgba(20,25,55,.12);
     }
 
     .producto-img{
-      height:250px;
-      background:white;
+      height:255px;
+      background:linear-gradient(180deg,#ffffff,#f8f9fc);
       display:flex;
       align-items:center;
       justify-content:center;
       overflow:hidden;
-      border-bottom:1px solid #eee;
+      border-bottom:1px solid var(--linea);
+      position:relative;
+    }
+
+    .producto-img::before{
+      content:"Disponible";
+      position:absolute;
+      top:14px;
+      left:14px;
+      background:rgba(37,211,102,.12);
+      color:#159447;
+      font-weight:900;
+      font-size:12px;
+      padding:7px 10px;
+      border-radius:999px;
+      z-index:1;
     }
 
     .producto-img img{
       width:100%;
       height:100%;
       object-fit:contain;
-      padding:14px;
+      padding:18px;
     }
 
     .sin-img{
@@ -283,29 +462,56 @@
       flex:1;
       display:flex;
       flex-direction:column;
-      text-align:center;
+      text-align:left;
+    }
+
+    .sku{
+      color:var(--muted);
+      font-size:12px;
+      font-weight:900;
+      letter-spacing:.4px;
+      margin-bottom:8px;
+      text-transform:uppercase;
     }
 
     .producto-body h3{
-      font-size:17px;
+      font-size:16px;
       margin-bottom:8px;
       color:#11163b;
-      line-height:1.3;
+      line-height:1.35;
       min-height:44px;
     }
 
     .marca{
-      font-size:14px;
+      font-size:13px;
       color:#66708a;
-      margin-bottom:10px;
+      margin-bottom:12px;
       min-height:18px;
+      font-weight:700;
+    }
+
+    .precio-row{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      margin-bottom:16px;
     }
 
     .precio{
       font-size:24px;
       font-weight:900;
       color:var(--rosado);
-      margin-bottom:16px;
+    }
+
+    .unidad{
+      color:var(--muted);
+      font-size:12px;
+      font-weight:900;
+      background:#f4f6fb;
+      padding:7px 9px;
+      border-radius:999px;
+      white-space:nowrap;
     }
 
     .whatsapp-btn{
@@ -316,9 +522,9 @@
       color:white;
       text-decoration:none;
       font-weight:900;
-      padding:13px;
-      border-radius:14px;
-      box-shadow:0 8px 18px rgba(37,211,102,.22);
+      padding:14px;
+      border-radius:15px;
+      box-shadow:0 9px 20px rgba(37,211,102,.24);
     }
 
     .mensaje{
@@ -326,41 +532,46 @@
       text-align:center;
       font-weight:900;
       color:#555;
-      padding:30px;
+      padding:34px;
+      background:white;
+      border-radius:20px;
+      border:1px solid var(--linea);
     }
 
     footer{
       background:#12123a;
       color:white;
       text-align:center;
-      padding:30px 6%;
+      padding:32px 6%;
     }
 
     footer span{color:#ffd84d}
+    footer p:last-child{margin-top:6px;color:rgba(255,255,255,.70)}
 
-    @media(max-width:1000px){
-      .hero::before,.hero::after{opacity:.35}
-      .catalogo{
-        grid-template-columns:repeat(2, minmax(0,1fr));
-      }
+    @media(max-width:1050px){
+      .hero-wrap{grid-template-columns:1fr}
+      .beneficios{grid-template-columns:repeat(2,1fr)}
+      .categorias{grid-template-columns:repeat(3,1fr)}
+      .catalogo{grid-template-columns:repeat(2, minmax(0,1fr));gap:24px}
+      .titulo-catalogo{align-items:flex-start;flex-direction:column}
+      .titulo-catalogo p{text-align:left}
     }
 
     @media(max-width:700px){
-      header{padding:24px 5%}
+      header{padding:22px 5%}
       .logo{font-size:25px}
-      .hero{padding:48px 5% 54px;min-height:auto}
+      .hero{padding:42px 5% 36px}
       .hero h1{font-size:34px}
       .hero p{font-size:16px}
       .search-box{flex-direction:column}
       .search-box button{padding:14px}
-      .catalogo{
-        padding:0 18px 60px;
-        grid-template-columns:1fr;
-        gap:24px;
-      }
-      .producto-img{height:230px}
-      .decor{display:none}
-      .hero::before,.hero::after{display:none}
+      .hero-panel{display:none}
+      .beneficios{grid-template-columns:1fr;padding:0 5%}
+      .section-wrap{padding:0 5%;margin-top:28px}
+      .categorias{grid-template-columns:repeat(2,1fr)}
+      .promo{flex-direction:column;align-items:flex-start}
+      .catalogo{grid-template-columns:1fr;gap:24px}
+      .producto-img{height:235px}
     }
   </style>
 </head>
@@ -375,46 +586,70 @@
 </header>
 
 <section class="hero">
-  <div class="decor lapiz d1"></div>
-  <div class="decor lapiz rosa d2"></div>
-  <div class="decor lapiz azul d3"></div>
-  <div class="decor lapiz d4"></div>
-  <div class="decor lapiz rosa d5"></div>
-  <div class="decor lapiz azul d6"></div>
-  <div class="decor punto p1"></div>
-  <div class="decor punto p2"></div>
-  <div class="decor punto p3"></div>
-  <div class="decor punto p4"></div>
-  <div class="decor punto p5"></div>
+  <div class="hero-wrap">
+    <div class="hero-copy">
+      <div class="tag">Catálogo comercial activo</div>
+      <h1>Librería y papelería para compras rápidas en Punta Arenas</h1>
+      <p>
+        Útiles escolares, productos de oficina, escritura, archivo y papelería con atención directa por WhatsApp.
+        Revisa el catálogo, busca por nombre o marca y solicita tu pedido en un solo mensaje.
+      </p>
 
-  <div class="hero-content">
-    <h1>Librería y Papelería</h1>
-    <p>
-      Útiles escolares, artículos de escritorio, cuadernos, lápices, carpetas,
-      marcadores, papelería y productos de oficina disponibles en Punta Arenas.
-    </p>
+      <div class="search-box">
+        <input id="buscador" type="text" placeholder="Buscar cuadernos, lápices, carpetas...">
+        <button onclick="filtrarProductos()">Buscar</button>
+      </div>
+    </div>
 
-    <div class="search-box">
-      <input id="buscador" type="text" placeholder="Buscar cuadernos, lápices, carpetas...">
-      <button onclick="filtrarProductos()">Buscar</button>
+    <div class="hero-panel">
+      <div class="panel-title">Compra simple y coordinada</div>
+      <div class="panel-text">
+        Selecciona productos del catálogo y consulta disponibilidad por WhatsApp. Ideal para útiles escolares, oficina, empresas y compras familiares.
+      </div>
+      <div class="mini-grid">
+        <div class="mini-card"><strong id="totalProductos">100+</strong><span>Productos</span></div>
+        <div class="mini-card"><strong id="totalMarcas">—</strong><span>Marcas</span></div>
+        <div class="mini-card"><strong>Local</strong><span>Punta Arenas</span></div>
+        <div class="mini-card"><strong>WhatsApp</strong><span>Atención directa</span></div>
+      </div>
     </div>
   </div>
 </section>
 
-<div class="categorias">
-  <button class="cat-btn active" onclick="filtrarCategoria('todos', this)">Todos</button>
-  <button class="cat-btn" onclick="filtrarCategoria('escolar', this)">Escolar</button>
-  <button class="cat-btn" onclick="filtrarCategoria('escritura', this)">Escritura</button>
-  <button class="cat-btn" onclick="filtrarCategoria('papeleria', this)">Papelería</button>
-  <button class="cat-btn" onclick="filtrarCategoria('archivo', this)">Archivo</button>
-  <button class="cat-btn" onclick="filtrarCategoria('manualidades', this)">Manualidades</button>
-  <button class="cat-btn" onclick="filtrarCategoria('oficina', this)">Oficina</button>
+<div class="beneficios">
+  <div class="beneficio"><div class="beneficio-icon">01</div><div><strong>Catálogo ordenado</strong><span>Escolar, oficina y papelería</span></div></div>
+  <div class="beneficio"><div class="beneficio-icon">02</div><div><strong>Consulta por WhatsApp</strong><span>Pedido rápido y coordinado</span></div></div>
+  <div class="beneficio"><div class="beneficio-icon">03</div><div><strong>Productos con código</strong><span>Compra más fácil de ubicar</span></div></div>
+  <div class="beneficio"><div class="beneficio-icon">04</div><div><strong>Atención local</strong><span>Disponible en Punta Arenas</span></div></div>
 </div>
 
-<h2 class="titulo-catalogo">Catálogo de productos</h2>
-<div class="linea"></div>
+<main class="section-wrap">
+  <div class="categorias">
+    <button class="cat-btn active" onclick="filtrarCategoria('todos', this)">Todos<small>Catálogo completo</small></button>
+    <button class="cat-btn" onclick="filtrarCategoria('escolar', this)">Escolar<small>Cuadernos y útiles</small></button>
+    <button class="cat-btn" onclick="filtrarCategoria('escritura', this)">Escritura<small>Lápices y marcadores</small></button>
+    <button class="cat-btn" onclick="filtrarCategoria('papeleria', this)">Papelería<small>Hojas y blocks</small></button>
+    <button class="cat-btn" onclick="filtrarCategoria('archivo', this)">Archivo<small>Carpetas y archivadores</small></button>
+    <button class="cat-btn" onclick="filtrarCategoria('manualidades', this)">Manualidades<small>Arte y creatividad</small></button>
+  </div>
 
-<section class="catalogo" id="catalogo"></section>
+  <section class="promo">
+    <div>
+      <h2>Arma tu pedido y cotiza directo</h2>
+      <p>El catálogo está preparado para revisar productos, comparar precios y solicitar atención por WhatsApp sin formularios complicados.</p>
+    </div>
+    <a href="https://wa.me/56912345678" target="_blank">Cotizar por WhatsApp</a>
+  </section>
+
+  <div class="titulo-catalogo">
+    <div>
+      <h2>Catálogo de productos</h2>
+    </div>
+    <p>Productos seleccionados para librería, papelería, escritorio, archivo y útiles escolares.</p>
+  </div>
+
+  <section class="catalogo" id="catalogo"></section>
+</main>
 
 <footer>
   <p><strong>Cumple<span>Patagonia</span></strong></p>
@@ -435,7 +670,7 @@ async function cargarProductos(){
 
     const data = await respuesta.json();
     productos = data.productos || data;
-
+    actualizarResumen(productos);
     render(productos);
   }catch(error){
     console.error("Error cargando productos:", error);
@@ -444,22 +679,40 @@ async function cargarProductos(){
   }
 }
 
+function actualizarResumen(lista){
+  const totalProductos = document.getElementById("totalProductos");
+  const totalMarcas = document.getElementById("totalMarcas");
+  if(totalProductos) totalProductos.textContent = lista.length + "+";
+
+  const marcas = new Set(
+    lista.map(p => (p.marca || "").trim()).filter(Boolean)
+  );
+  if(totalMarcas) totalMarcas.textContent = marcas.size || "—";
+}
+
 function formatoPrecio(valor){
   return "$" + Number(valor || 0).toLocaleString("es-CL");
 }
 
 function obtenerImagen(p){
-  if(!p.imagen) return "";
+  const codigo = (p.sku_imagen || p.sku || p.codigo || "").toString().trim();
 
-  if(
-    p.imagen.startsWith("http") ||
-    p.imagen.startsWith("assets/") ||
-    p.imagen.startsWith("./assets/")
-  ){
-    return p.imagen;
+  if(p.imagen){
+    if(
+      p.imagen.startsWith("http") ||
+      p.imagen.startsWith("assets/") ||
+      p.imagen.startsWith("./assets/")
+    ){
+      return p.imagen;
+    }
+    return "assets/productos/" + p.imagen;
   }
 
-  return "assets/productos/" + p.imagen;
+  if(codigo){
+    return "assets/productos/" + codigo + ".png";
+  }
+
+  return "";
 }
 
 function render(lista){
@@ -474,11 +727,17 @@ function render(lista){
   lista.forEach(p => {
     const nombre = p.nombre || "Producto";
     const marca = p.marca || "";
-    const precio = p.precio || 0;
+    const codigo = p.sku || p.codigo || "";
+    const precio = p.precio || p.precio_final_iva_incluido || 0;
+    const unidad = p.unidad || "UNI";
     const imagen = obtenerImagen(p);
 
     const mensaje = encodeURIComponent(
-      "Hola CumplePatagonia, quiero consultar por: " + nombre
+      "Hola CumplePatagonia, quiero consultar por este producto:\n\n" +
+      "Código/SKU: " + codigo + "\n" +
+      "Producto: " + nombre + "\n" +
+      "Marca: " + marca + "\n" +
+      "Precio publicado: " + formatoPrecio(precio)
     );
 
     contenedor.innerHTML += `
@@ -492,9 +751,13 @@ function render(lista){
         </div>
 
         <div class="producto-body">
+          <div class="sku">SKU: ${codigo || "Sin código"}</div>
           <h3>${nombre}</h3>
           <div class="marca">${marca}</div>
-          <div class="precio">${formatoPrecio(precio)}</div>
+          <div class="precio-row">
+            <div class="precio">${formatoPrecio(precio)}</div>
+            <div class="unidad">${unidad}</div>
+          </div>
           <a class="whatsapp-btn" href="https://wa.me/56912345678?text=${mensaje}" target="_blank">
             Pedir por WhatsApp
           </a>
@@ -519,11 +782,13 @@ function filtrarProductos(){
   const filtrados = productos.filter(p => {
     const nombre = (p.nombre || "").toLowerCase();
     const marca = (p.marca || "").toLowerCase();
+    const codigo = (p.sku || p.codigo || "").toLowerCase();
     const categoria = (p.categoria_cumplepatagonia || p.categoria || "").toLowerCase();
 
     const coincideTexto =
       nombre.includes(texto) ||
-      marca.includes(texto);
+      marca.includes(texto) ||
+      codigo.includes(texto);
 
     const coincideCategoria =
       categoriaActual === "todos" ||
@@ -542,4 +807,3 @@ cargarProductos();
 
 </body>
 </html>
-
