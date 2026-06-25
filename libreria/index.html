@@ -12,6 +12,21 @@
       font-family:Arial,sans-serif;
       background:#f7f7fb;
       color:#222;
+      overflow-x:hidden;
+    }
+
+    body::before{
+      content:"✏️ 📓 📎 🖍️ 📄 ✂️ 📚 🧴 ✏️ 📘 📌 🖊️ 📎 📒";
+      position:fixed;
+      inset:0;
+      font-size:42px;
+      line-height:120px;
+      letter-spacing:38px;
+      opacity:.055;
+      z-index:-1;
+      transform:rotate(-10deg);
+      pointer-events:none;
+      white-space:pre-wrap;
     }
 
     header{
@@ -45,15 +60,42 @@
     }
 
     .hero{
-      padding:45px 6%;
-      background:linear-gradient(135deg,#fff0f7,#eef2ff);
+      padding:55px 6%;
+      background:
+        radial-gradient(circle at 10% 20%, rgba(233,30,99,.12), transparent 28%),
+        radial-gradient(circle at 90% 20%, rgba(91,44,255,.14), transparent 30%),
+        linear-gradient(135deg,#fff0f7,#eef2ff);
       text-align:center;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .hero::before{
+      content:"✏️";
+      position:absolute;
+      left:8%;
+      top:35px;
+      font-size:70px;
+      opacity:.22;
+      transform:rotate(-20deg);
+    }
+
+    .hero::after{
+      content:"📓";
+      position:absolute;
+      right:9%;
+      bottom:28px;
+      font-size:78px;
+      opacity:.20;
+      transform:rotate(15deg);
     }
 
     .hero h1{
       font-size:44px;
       margin-bottom:14px;
       color:#26144d;
+      position:relative;
+      z-index:1;
     }
 
     .hero p{
@@ -62,6 +104,8 @@
       font-size:18px;
       line-height:1.6;
       color:#555;
+      position:relative;
+      z-index:1;
     }
 
     .search-box{
@@ -73,6 +117,8 @@
       padding:10px;
       border-radius:18px;
       box-shadow:0 10px 28px rgba(0,0,0,.08);
+      position:relative;
+      z-index:1;
     }
 
     .search-box input{
@@ -134,17 +180,30 @@
     }
 
     .producto-img{
-      height:150px;
+      height:160px;
       background:linear-gradient(135deg,#efe9ff,#ffe4f1);
       display:flex;
       align-items:center;
       justify-content:center;
+      overflow:hidden;
+    }
+
+    .producto-img img{
+      width:100%;
+      height:100%;
+      object-fit:contain;
+      padding:14px;
+    }
+
+    .sin-img{
       font-size:52px;
     }
 
     .producto-body{
       padding:18px;
       flex:1;
+      display:flex;
+      flex-direction:column;
     }
 
     .producto-body h3{
@@ -168,6 +227,7 @@
     }
 
     .whatsapp-btn{
+      margin-top:auto;
       display:block;
       text-align:center;
       background:#25d366;
@@ -219,7 +279,7 @@
   <button class="cat-btn active" onclick="filtrarCategoria('todos', this)">Todos</button>
   <button class="cat-btn" onclick="filtrarCategoria('escolar', this)">📓 Escolar</button>
   <button class="cat-btn" onclick="filtrarCategoria('escritura', this)">✏️ Escritura</button>
-  <button class="cat-btn" onclick="filtrarCategoria('papel', this)">📄 Papel</button>
+  <button class="cat-btn" onclick="filtrarCategoria('papeleria', this)">📄 Papelería</button>
   <button class="cat-btn" onclick="filtrarCategoria('archivo', this)">📁 Archivo</button>
   <button class="cat-btn" onclick="filtrarCategoria('manualidades', this)">🎨 Manualidades</button>
   <button class="cat-btn" onclick="filtrarCategoria('oficina', this)">🏢 Oficina</button>
@@ -233,104 +293,85 @@
 </footer>
 
 <script>
-  const productos = [
-    {
-      nombre: "Cuaderno universitario matemática 100 hojas",
-      marca: "Torre",
-      categoria: "escolar",
-      precio: 1841,
-      icono: "📓"
-    },
-    {
-      nombre: "Lápiz pasta azul punta media",
-      marca: "Fultons",
-      categoria: "escritura",
-      precio: 108,
-      icono: "✏️"
-    },
-    {
-      nombre: "Adhesivo en barra 21 gr",
-      marca: "Torre",
-      categoria: "manualidades",
-      precio: 619,
-      icono: "🧴"
-    },
-    {
-      nombre: "Carpeta con elástico cartulina azul",
-      marca: "Lavoro",
-      categoria: "archivo",
-      precio: 797,
-      icono: "📁"
-    },
-    {
-      nombre: "Block dibujo 1/8 medio 20 hojas",
-      marca: "Artel",
-      categoria: "papel",
-      precio: 2272,
-      icono: "📄"
-    },
-    {
-      nombre: "Corchetera larga metálica 30 hojas",
-      marca: "Lavoro",
-      categoria: "oficina",
-      precio: 3739,
-      icono: "📌"
-    }
-  ];
+let productos = [];
+let categoriaActual = "todos";
 
-  let categoriaActual = "todos";
-
-  function formatoPrecio(valor){
-    return "$" + valor.toLocaleString("es-CL");
+async function cargarProductos(){
+  try{
+    const respuesta = await fetch("productos.json");
+    const data = await respuesta.json();
+    productos = data.productos || data;
+    render(productos);
+  }catch(error){
+    console.error("Error cargando productos:", error);
+    document.getElementById("catalogo").innerHTML = "<p>No se pudo cargar el catálogo.</p>";
   }
+}
 
-  function render(lista){
-    const contenedor = document.getElementById("catalogo");
-    contenedor.innerHTML = "";
+function formatoPrecio(valor){
+  return "$" + Number(valor || 0).toLocaleString("es-CL");
+}
 
-    lista.forEach(p => {
-      const mensaje = encodeURIComponent(
-        `Hola CumplePatagonia, quiero consultar por: ${p.nombre}`
-      );
+function render(lista){
+  const contenedor = document.getElementById("catalogo");
+  contenedor.innerHTML = "";
 
-      contenedor.innerHTML += `
-        <div class="producto">
-          <div class="producto-img">${p.icono}</div>
-          <div class="producto-body">
-            <h3>${p.nombre}</h3>
-            <div class="marca">${p.marca}</div>
-            <div class="precio">${formatoPrecio(p.precio)}</div>
-            <a class="whatsapp-btn" href="https://wa.me/56912345678?text=${mensaje}">
-              Pedir por WhatsApp
-            </a>
-          </div>
+  lista.forEach(p => {
+    const mensaje = encodeURIComponent(`Hola CumplePatagonia, quiero consultar por: ${p.nombre}`);
+    const imagen = p.imagen || "";
+
+    contenedor.innerHTML += `
+      <div class="producto">
+        <div class="producto-img">
+          ${
+            imagen
+            ? `<img src="${imagen}" alt="${p.nombre}" onerror="this.parentElement.innerHTML='<span class=&quot;sin-img&quot;>📚</span>'">`
+            : `<span class="sin-img">📚</span>`
+          }
         </div>
-      `;
-    });
-  }
 
-  function filtrarCategoria(cat, boton){
-    categoriaActual = cat;
+        <div class="producto-body">
+          <h3>${p.nombre || "Producto"}</h3>
+          <div class="marca">${p.marca || ""}</div>
+          <div class="precio">${formatoPrecio(p.precio)}</div>
+          <a class="whatsapp-btn" href="https://wa.me/56912345678?text=${mensaje}">
+            Pedir por WhatsApp
+          </a>
+        </div>
+      </div>
+    `;
+  });
+}
 
-    document.querySelectorAll(".cat-btn").forEach(b => b.classList.remove("active"));
-    boton.classList.add("active");
+function filtrarCategoria(cat, boton){
+  categoriaActual = cat;
 
-    filtrarProductos();
-  }
+  document.querySelectorAll(".cat-btn").forEach(b => b.classList.remove("active"));
+  boton.classList.add("active");
 
-  function filtrarProductos(){
-    const texto = document.getElementById("buscador").value.toLowerCase();
+  filtrarProductos();
+}
 
-    const filtrados = productos.filter(p => {
-      const coincideTexto = p.nombre.toLowerCase().includes(texto) || p.marca.toLowerCase().includes(texto);
-      const coincideCategoria = categoriaActual === "todos" || p.categoria === categoriaActual;
-      return coincideTexto && coincideCategoria;
-    });
+function filtrarProductos(){
+  const texto = document.getElementById("buscador").value.toLowerCase();
 
-    render(filtrados);
-  }
+  const filtrados = productos.filter(p => {
+    const nombre = (p.nombre || "").toLowerCase();
+    const marca = (p.marca || "").toLowerCase();
+    const categoria = p.categoria_cumplepatagonia || p.categoria || "";
 
-  render(productos);
+    const coincideTexto = nombre.includes(texto) || marca.includes(texto);
+    const coincideCategoria = categoriaActual === "todos" || categoria === categoriaActual;
+
+    return coincideTexto && coincideCategoria;
+  });
+
+  render(filtrados);
+}
+
+document.getElementById("buscador").addEventListener("input", filtrarProductos);
+
+cargarProductos();
 </script>
 
 </body>
