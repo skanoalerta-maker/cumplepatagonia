@@ -503,6 +503,84 @@
       color:var(--rosado);
     }
 
+    .precio-neto{
+      font-size:12px;
+      font-weight:900;
+      color:#66708a;
+      margin-top:4px;
+      letter-spacing:.2px;
+    }
+
+    .pedido-resumen{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      position:relative;
+      z-index:1;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+
+    .pedido-contador{
+      background:white;
+      color:var(--azul);
+      padding:12px 18px;
+      border-radius:999px;
+      font-weight:900;
+      box-shadow:0 10px 24px rgba(0,0,0,.12);
+      white-space:nowrap;
+    }
+
+    .pedido-contador span{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-width:28px;
+      height:28px;
+      margin-left:6px;
+      border-radius:999px;
+      background:var(--rosado);
+      color:white;
+      font-size:14px;
+    }
+
+    .pedido-actions{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+
+    .vaciar-btn{
+      border:none;
+      background:rgba(255,255,255,.14);
+      color:white;
+      font-weight:900;
+      padding:14px 18px;
+      border-radius:999px;
+      cursor:pointer;
+      border:1px solid rgba(255,255,255,.24);
+    }
+
+    .agregar-btn{
+      width:100%;
+      margin-top:auto;
+      border:none;
+      background:linear-gradient(135deg,var(--morado),var(--rosado));
+      color:white;
+      font-weight:900;
+      padding:13px 14px;
+      border-radius:15px;
+      cursor:pointer;
+      box-shadow:0 9px 20px rgba(91,44,255,.20);
+      transition:.2s ease;
+    }
+
+    .agregar-btn:hover{
+      transform:translateY(-1px);
+      filter:brightness(1.03);
+    }
+
     .unidad{
       color:var(--muted);
       font-size:12px;
@@ -569,6 +647,7 @@
       .section-wrap{padding:0 5%;margin-top:28px}
       .categorias{grid-template-columns:repeat(2,1fr)}
       .promo{flex-direction:column;align-items:flex-start}
+      .pedido-resumen{justify-content:flex-start;width:100%}
       .catalogo{grid-template-columns:1fr;gap:24px}
       .producto-img{height:235px}
     }
@@ -635,9 +714,16 @@
   <section class="promo">
     <div>
       <h2>Arma tu pedido y cotiza directo</h2>
-      <p>El catálogo está preparado para revisar productos, comparar precios y solicitar atención por WhatsApp sin formularios complicados.</p>
+      <p>Agrega productos al pedido y envía una sola cotización por WhatsApp sin formularios complicados.</p>
     </div>
-    <a href="https://wa.me/56912345678" target="_blank">Cotizar por WhatsApp</a>
+
+    <div class="pedido-resumen">
+      <div class="pedido-contador">Pedido <span id="contadorPedido">0</span></div>
+      <div class="pedido-actions">
+        <button class="vaciar-btn" type="button" onclick="vaciarPedido()">Vaciar</button>
+        <a id="btnPedido" href="https://wa.me/56912345678" target="_blank">Cotizar por WhatsApp</a>
+      </div>
+    </div>
   </section>
 
   <div class="titulo-catalogo">
@@ -657,7 +743,9 @@
 
 <script>
 let productos = [];
+let pedido = [];
 let categoriaActual = "todos";
+const whatsappCumplePatagonia = "56912345678";
 
 async function cargarProductos(){
   try{
@@ -754,10 +842,18 @@ function render(lista){
           <h3>${nombre}</h3>
           <div class="marca">${marca}</div>
           <div class="precio-row">
-            <div class="precio">${formatoPrecio(precio)}</div>
+            <div>
+              <div class="precio">${formatoPrecio(precio)}</div>
+              <div class="precio-neto">Precio neto</div>
+            </div>
             <div class="unidad">${unidad}</div>
           </div>
-          <a class="whatsapp-btn" href="https://wa.me/56912345678?text=${mensaje}" target="_blank">
+
+          <button class="agregar-btn" type="button" data-codigo="${codigo}" data-nombre="${nombre}" data-marca="${marca}" data-precio="${precio}">
+            Agregar al pedido
+          </button>
+
+          <a class="whatsapp-btn" href="https://wa.me/${whatsappCumplePatagonia}?text=${mensaje}" target="_blank">
             Pedir por WhatsApp
           </a>
         </div>
@@ -799,7 +895,82 @@ function filtrarProductos(){
   render(filtrados);
 }
 
+
+function agregarPedido(producto){
+  const codigo = producto.codigo || "Sin código";
+  const existente = pedido.find(item => item.codigo === codigo && item.nombre === producto.nombre);
+
+  if(existente){
+    existente.cantidad += 1;
+  }else{
+    pedido.push({
+      codigo,
+      nombre: producto.nombre || "Producto",
+      marca: producto.marca || "",
+      precio: Number(producto.precio || 0),
+      cantidad: 1
+    });
+  }
+
+  actualizarPedido();
+}
+
+function actualizarPedido(){
+  const contador = document.getElementById("contadorPedido");
+  const btnPedido = document.getElementById("btnPedido");
+  const totalUnidades = pedido.reduce((sum,item) => sum + item.cantidad, 0);
+
+  if(contador) contador.textContent = totalUnidades;
+
+  if(!btnPedido) return;
+
+  if(pedido.length === 0){
+    btnPedido.href = "https://wa.me/" + whatsappCumplePatagonia + "?text=" + encodeURIComponent("Hola CumplePatagonia, quiero cotizar productos de librería.");
+    return;
+  }
+
+  let texto = "Hola CumplePatagonia, quiero cotizar este pedido:
+
+";
+
+  pedido.forEach((item,index) => {
+    texto += (index + 1) + ". " + item.nombre + "
+";
+    texto += "Código/SKU: " + item.codigo + "
+";
+    if(item.marca) texto += "Marca: " + item.marca + "
+";
+    texto += "Cantidad: " + item.cantidad + "
+";
+    texto += "Precio neto publicado: " + formatoPrecio(item.precio) + "
+
+";
+  });
+
+  texto += "Quedo atento a disponibilidad y valor final.";
+
+  btnPedido.href = "https://wa.me/" + whatsappCumplePatagonia + "?text=" + encodeURIComponent(texto);
+}
+
+function vaciarPedido(){
+  pedido = [];
+  actualizarPedido();
+}
+
+document.getElementById("catalogo").addEventListener("click", function(e){
+  const boton = e.target.closest(".agregar-btn");
+  if(!boton) return;
+
+  agregarPedido({
+    codigo: boton.dataset.codigo,
+    nombre: boton.dataset.nombre,
+    marca: boton.dataset.marca,
+    precio: boton.dataset.precio
+  });
+});
+
 document.getElementById("buscador").addEventListener("input", filtrarProductos);
+actualizarPedido();
 
 cargarProductos();
 </script>
