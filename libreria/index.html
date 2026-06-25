@@ -15,37 +15,6 @@
       overflow-x:hidden;
     }
 
-.hero{
-  padding:55px 6%;
-  background:
-    radial-gradient(circle at 10% 20%, rgba(233,30,99,.12), transparent 28%),
-    radial-gradient(circle at 90% 20%, rgba(91,44,255,.14), transparent 30%),
-    linear-gradient(135deg,#fff0f7,#eef2ff);
-  text-align:center;
-  position:relative;
-  overflow:hidden;
-}
-
-.hero::before{
-  content:"✏️";
-  position:absolute;
-  left:8%;
-  top:35px;
-  font-size:70px;
-  opacity:.22;
-  transform:rotate(-20deg);
-}
-
-.hero::after{
-  content:"📓";
-  position:absolute;
-  right:9%;
-  bottom:28px;
-  font-size:78px;
-  opacity:.20;
-  transform:rotate(15deg);
-}
-
     header{
       background:linear-gradient(135deg,#5b2cff,#e91e63);
       color:white;
@@ -87,32 +56,10 @@
       overflow:hidden;
     }
 
-    .hero::before{
-      content:"✏️";
-      position:absolute;
-      left:8%;
-      top:35px;
-      font-size:70px;
-      opacity:.22;
-      transform:rotate(-20deg);
-    }
-
-    .hero::after{
-      content:"📓";
-      position:absolute;
-      right:9%;
-      bottom:28px;
-      font-size:78px;
-      opacity:.20;
-      transform:rotate(15deg);
-    }
-
     .hero h1{
       font-size:44px;
       margin-bottom:14px;
       color:#26144d;
-      position:relative;
-      z-index:1;
     }
 
     .hero p{
@@ -121,8 +68,6 @@
       font-size:18px;
       line-height:1.6;
       color:#555;
-      position:relative;
-      z-index:1;
     }
 
     .search-box{
@@ -134,8 +79,6 @@
       padding:10px;
       border-radius:18px;
       box-shadow:0 10px 28px rgba(0,0,0,.08);
-      position:relative;
-      z-index:1;
     }
 
     .search-box input{
@@ -280,7 +223,7 @@
 </header>
 
 <section class="hero">
-  <h1>📚 Librería y papelería</h1>
+  <h1>Librería y Papelería</h1>
   <p>
     Útiles escolares, artículos de escritorio, cuadernos, lápices, carpetas,
     marcadores, papelería y productos de oficina disponibles en Punta Arenas.
@@ -294,12 +237,12 @@
 
 <div class="categorias">
   <button class="cat-btn active" onclick="filtrarCategoria('todos', this)">Todos</button>
-  <button class="cat-btn" onclick="filtrarCategoria('escolar', this)">📓 Escolar</button>
-  <button class="cat-btn" onclick="filtrarCategoria('escritura', this)">✏️ Escritura</button>
-  <button class="cat-btn" onclick="filtrarCategoria('papeleria', this)">📄 Papelería</button>
-  <button class="cat-btn" onclick="filtrarCategoria('archivo', this)">📁 Archivo</button>
-  <button class="cat-btn" onclick="filtrarCategoria('manualidades', this)">🎨 Manualidades</button>
-  <button class="cat-btn" onclick="filtrarCategoria('oficina', this)">🏢 Oficina</button>
+  <button class="cat-btn" onclick="filtrarCategoria('escolar', this)">Escolar</button>
+  <button class="cat-btn" onclick="filtrarCategoria('escritura', this)">Escritura</button>
+  <button class="cat-btn" onclick="filtrarCategoria('papeleria', this)">Papelería</button>
+  <button class="cat-btn" onclick="filtrarCategoria('archivo', this)">Archivo</button>
+  <button class="cat-btn" onclick="filtrarCategoria('manualidades', this)">Manualidades</button>
+  <button class="cat-btn" onclick="filtrarCategoria('oficina', this)">Oficina</button>
 </div>
 
 <section class="catalogo" id="catalogo"></section>
@@ -333,6 +276,11 @@ function render(lista){
   const contenedor = document.getElementById("catalogo");
   contenedor.innerHTML = "";
 
+  if(lista.length === 0){
+    contenedor.innerHTML = "<p>No encontramos productos con esa búsqueda.</p>";
+    return;
+  }
+
   lista.forEach(p => {
     const mensaje = encodeURIComponent(`Hola CumplePatagonia, quiero consultar por: ${p.nombre}`);
     const imagen = p.imagen || "";
@@ -351,7 +299,7 @@ function render(lista){
           <h3>${p.nombre || "Producto"}</h3>
           <div class="marca">${p.marca || ""}</div>
           <div class="precio">${formatoPrecio(p.precio)}</div>
-          <a class="whatsapp-btn" href="https://wa.me/56912345678?text=${mensaje}">
+          <a class="whatsapp-btn" href="https://wa.me/56912345678?text=${mensaje}" target="_blank">
             Pedir por WhatsApp
           </a>
         </div>
