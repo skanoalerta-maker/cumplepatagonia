@@ -18,7 +18,7 @@
     header{
       background:linear-gradient(135deg,#5b2cff,#e91e63);
       color:white;
-      padding:34px 6%;
+      padding:30px 6%;
     }
 
     .top{
@@ -27,7 +27,7 @@
       align-items:center;
       gap:20px;
       flex-wrap:wrap;
-      max-width:1680px;
+      max-width:1180px;
       margin:auto;
     }
 
@@ -48,7 +48,7 @@
     }
 
     .hero{
-      padding:55px 6%;
+      padding:52px 6%;
       background:
         radial-gradient(circle at 10% 20%, rgba(233,30,99,.12), transparent 28%),
         radial-gradient(circle at 90% 20%, rgba(91,44,255,.14), transparent 30%),
@@ -100,7 +100,7 @@
     }
 
     .categorias{
-      padding:35px 6% 10px;
+      padding:32px 6% 10px;
       display:flex;
       gap:12px;
       flex-wrap:wrap;
@@ -126,9 +126,9 @@
     .catalogo{
       padding:30px 6% 70px;
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:22px;
-      max-width:1680px;
+      grid-template-columns:repeat(3, 1fr);
+      gap:24px;
+      max-width:1180px;
       margin:auto;
     }
 
@@ -139,22 +139,24 @@
       box-shadow:0 12px 30px rgba(0,0,0,.08);
       display:flex;
       flex-direction:column;
+      min-height:430px;
     }
 
     .producto-img{
-      height:180px;
-      background:linear-gradient(135deg,#efe9ff,#ffe4f1);
+      height:250px;
+      background:white;
       display:flex;
       align-items:center;
       justify-content:center;
       overflow:hidden;
+      border-bottom:1px solid #eee;
     }
 
     .producto-img img{
       width:100%;
       height:100%;
       object-fit:contain;
-      padding:14px;
+      padding:12px;
     }
 
     .sin-img{
@@ -171,7 +173,7 @@
     }
 
     .producto-body h3{
-      font-size:16px;
+      font-size:17px;
       margin-bottom:8px;
       color:#222;
       line-height:1.3;
@@ -185,7 +187,7 @@
     }
 
     .precio{
-      font-size:22px;
+      font-size:24px;
       font-weight:900;
       color:#e91e63;
       margin-bottom:14px;
@@ -199,7 +201,7 @@
       color:white;
       text-decoration:none;
       font-weight:900;
-      padding:12px;
+      padding:13px;
       border-radius:14px;
     }
 
@@ -218,10 +220,30 @@
       padding:28px 6%;
     }
 
-    @media(max-width:700px){
+    @media(max-width:950px){
+      .catalogo{
+        grid-template-columns:repeat(2, 1fr);
+      }
+    }
+
+    @media(max-width:600px){
       .hero h1{font-size:34px}
-      .search-box{flex-direction:column}
-      .search-box button{padding:14px}
+
+      .search-box{
+        flex-direction:column;
+      }
+
+      .search-box button{
+        padding:14px;
+      }
+
+      .catalogo{
+        grid-template-columns:1fr;
+      }
+
+      .producto-img{
+        height:230px;
+      }
     }
   </style>
 </head>
