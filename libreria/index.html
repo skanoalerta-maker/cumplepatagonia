@@ -921,7 +921,6 @@ function actualizarPedido(){
   const totalUnidades = pedido.reduce((sum,item) => sum + item.cantidad, 0);
 
   if(contador) contador.textContent = totalUnidades;
-
   if(!btnPedido) return;
 
   if(pedido.length === 0){
@@ -929,22 +928,14 @@ function actualizarPedido(){
     return;
   }
 
-  let texto = "Hola CumplePatagonia, quiero cotizar este pedido:
-
-";
+  let texto = "Hola CumplePatagonia, quiero cotizar este pedido:\n\n";
 
   pedido.forEach((item,index) => {
-    texto += (index + 1) + ". " + item.nombre + "
-";
-    texto += "Código/SKU: " + item.codigo + "
-";
-    if(item.marca) texto += "Marca: " + item.marca + "
-";
-    texto += "Cantidad: " + item.cantidad + "
-";
-    texto += "Precio neto publicado: " + formatoPrecio(item.precio) + "
-
-";
+    texto += (index + 1) + ". " + item.nombre + "\n";
+    texto += "Código/SKU: " + item.codigo + "\n";
+    if(item.marca) texto += "Marca: " + item.marca + "\n";
+    texto += "Cantidad: " + item.cantidad + "\n";
+    texto += "Precio neto publicado: " + formatoPrecio(item.precio) + "\n\n";
   });
 
   texto += "Quedo atento a disponibilidad y valor final.";
