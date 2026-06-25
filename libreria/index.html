@@ -72,15 +72,24 @@
 
     .back:hover{background:rgba(255,255,255,.26)}
 
-    .hero{
-      padding:58px 6% 48px;
-      position:relative;
-      overflow:hidden;
-      background:
-        linear-gradient(135deg,rgba(255,255,255,.94),rgba(246,241,255,.92)),
-        repeating-linear-gradient(135deg,rgba(91,44,255,.035) 0 1px,transparent 1px 18px);
-      border-bottom:1px solid var(--linea);
-    }
+.hero{
+  padding:58px 6% 48px;
+  position:relative;
+  overflow:hidden;
+
+  background:
+    linear-gradient(
+      rgba(255,255,255,.88),
+      rgba(255,255,255,.88)
+    ),
+    url("../assets/banner-magallanes.jpg");
+
+  background-size:cover;
+  background-position:center center;
+  background-repeat:no-repeat;
+
+  border-bottom:1px solid var(--linea);
+}
 
     .hero::before{
       content:"";
