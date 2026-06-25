@@ -27,6 +27,8 @@
       align-items:center;
       gap:20px;
       flex-wrap:wrap;
+      max-width:1680px;
+      margin:auto;
     }
 
     .logo{
@@ -52,8 +54,6 @@
         radial-gradient(circle at 90% 20%, rgba(91,44,255,.14), transparent 30%),
         linear-gradient(135deg,#fff0f7,#eef2ff);
       text-align:center;
-      position:relative;
-      overflow:hidden;
     }
 
     .hero h1{
@@ -128,6 +128,8 @@
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
       gap:22px;
+      max-width:1680px;
+      margin:auto;
     }
 
     .producto{
@@ -140,7 +142,7 @@
     }
 
     .producto-img{
-      height:160px;
+      height:180px;
       background:linear-gradient(135deg,#efe9ff,#ffe4f1);
       display:flex;
       align-items:center;
@@ -156,7 +158,9 @@
     }
 
     .sin-img{
-      font-size:52px;
+      font-size:13px;
+      color:#777;
+      font-weight:900;
     }
 
     .producto-body{
@@ -177,6 +181,7 @@
       font-size:13px;
       color:#777;
       margin-bottom:10px;
+      min-height:16px;
     }
 
     .precio{
@@ -196,6 +201,14 @@
       font-weight:900;
       padding:12px;
       border-radius:14px;
+    }
+
+    .mensaje{
+      grid-column:1/-1;
+      text-align:center;
+      font-weight:900;
+      color:#555;
+      padding:30px;
     }
 
     footer{
@@ -258,13 +271,20 @@ let categoriaActual = "todos";
 
 async function cargarProductos(){
   try{
-    const respuesta = await fetch("productos.json");
+    const respuesta = await fetch("productos.json?v=" + Date.now());
+
+    if(!respuesta.ok){
+      throw new Error("No se encontró productos.json");
+    }
+
     const data = await respuesta.json();
     productos = data.productos || data;
+
     render(productos);
   }catch(error){
     console.error("Error cargando productos:", error);
-    document.getElementById("catalogo").innerHTML = "<p>No se pudo cargar el catálogo.</p>";
+    document.getElementById("catalogo").innerHTML =
+      '<div class="mensaje">No se pudo cargar el catálogo. Revisa que exista libreria/productos.json</div>';
   }
 }
 
@@ -272,33 +292,53 @@ function formatoPrecio(valor){
   return "$" + Number(valor || 0).toLocaleString("es-CL");
 }
 
+function obtenerImagen(p){
+  if(!p.imagen) return "";
+
+  if(
+    p.imagen.startsWith("http") ||
+    p.imagen.startsWith("assets/") ||
+    p.imagen.startsWith("./assets/")
+  ){
+    return p.imagen;
+  }
+
+  return "assets/productos/" + p.imagen;
+}
+
 function render(lista){
   const contenedor = document.getElementById("catalogo");
   contenedor.innerHTML = "";
 
   if(lista.length === 0){
-    contenedor.innerHTML = "<p>No encontramos productos con esa búsqueda.</p>";
+    contenedor.innerHTML = '<div class="mensaje">No encontramos productos con esa búsqueda.</div>';
     return;
   }
 
   lista.forEach(p => {
-    const mensaje = encodeURIComponent(`Hola CumplePatagonia, quiero consultar por: ${p.nombre}`);
-    const imagen = p.imagen || "";
+    const nombre = p.nombre || "Producto";
+    const marca = p.marca || "";
+    const precio = p.precio || 0;
+    const imagen = obtenerImagen(p);
+
+    const mensaje = encodeURIComponent(
+      "Hola CumplePatagonia, quiero consultar por: " + nombre
+    );
 
     contenedor.innerHTML += `
       <div class="producto">
         <div class="producto-img">
           ${
             imagen
-            ? `<img src="${imagen}" alt="${p.nombre}" onerror="this.parentElement.innerHTML='<span class=&quot;sin-img&quot;>📚</span>'">`
-            : `<span class="sin-img">📚</span>`
+            ? `<img src="${imagen}" alt="${nombre}" onerror="this.parentElement.innerHTML='<span class=&quot;sin-img&quot;>Sin imagen</span>'">`
+            : `<span class="sin-img">Sin imagen</span>`
           }
         </div>
 
         <div class="producto-body">
-          <h3>${p.nombre || "Producto"}</h3>
-          <div class="marca">${p.marca || ""}</div>
-          <div class="precio">${formatoPrecio(p.precio)}</div>
+          <h3>${nombre}</h3>
+          <div class="marca">${marca}</div>
+          <div class="precio">${formatoPrecio(precio)}</div>
           <a class="whatsapp-btn" href="https://wa.me/56912345678?text=${mensaje}" target="_blank">
             Pedir por WhatsApp
           </a>
@@ -318,15 +358,20 @@ function filtrarCategoria(cat, boton){
 }
 
 function filtrarProductos(){
-  const texto = document.getElementById("buscador").value.toLowerCase();
+  const texto = document.getElementById("buscador").value.toLowerCase().trim();
 
   const filtrados = productos.filter(p => {
     const nombre = (p.nombre || "").toLowerCase();
     const marca = (p.marca || "").toLowerCase();
-    const categoria = p.categoria_cumplepatagonia || p.categoria || "";
+    const categoria = (p.categoria_cumplepatagonia || p.categoria || "").toLowerCase();
 
-    const coincideTexto = nombre.includes(texto) || marca.includes(texto);
-    const coincideCategoria = categoriaActual === "todos" || categoria === categoriaActual;
+    const coincideTexto =
+      nombre.includes(texto) ||
+      marca.includes(texto);
+
+    const coincideCategoria =
+      categoriaActual === "todos" ||
+      categoria === categoriaActual;
 
     return coincideTexto && coincideCategoria;
   });
