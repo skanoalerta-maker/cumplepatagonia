@@ -8,17 +8,26 @@
   <style>
     *{margin:0;padding:0;box-sizing:border-box}
 
+    :root{
+      --morado:#5b2cff;
+      --rosado:#e91e63;
+      --verde:#25d366;
+      --azul-oscuro:#17124a;
+      --texto:#222;
+      --suave:#f7f7fb;
+    }
+
     body{
       font-family:Arial,sans-serif;
       background:#f7f7fb;
-      color:#222;
+      color:var(--texto);
       overflow-x:hidden;
     }
 
     header{
-      background:linear-gradient(135deg,#5b2cff,#e91e63);
+      background:linear-gradient(135deg,var(--morado),var(--rosado));
       color:white;
-      padding:30px 6%;
+      padding:28px 6%;
     }
 
     .top{
@@ -34,6 +43,7 @@
     .logo{
       font-size:30px;
       font-weight:900;
+      letter-spacing:-.5px;
     }
 
     .logo span{color:#ffd84d}
@@ -43,23 +53,108 @@
       text-decoration:none;
       font-weight:900;
       background:rgba(255,255,255,.18);
-      padding:10px 16px;
+      padding:11px 18px;
       border-radius:999px;
+      box-shadow:0 10px 22px rgba(0,0,0,.10);
     }
 
     .hero{
-      padding:52px 6%;
+      min-height:360px;
+      padding:56px 6% 68px;
       background:
-        radial-gradient(circle at 10% 20%, rgba(233,30,99,.12), transparent 28%),
-        radial-gradient(circle at 90% 20%, rgba(91,44,255,.14), transparent 30%),
+        radial-gradient(circle at 12% 20%, rgba(233,30,99,.16), transparent 30%),
+        radial-gradient(circle at 88% 18%, rgba(91,44,255,.18), transparent 32%),
         linear-gradient(135deg,#fff0f7,#eef2ff);
       text-align:center;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .hero::before{
+      content:"";
+      position:absolute;
+      left:-20px;
+      bottom:-10px;
+      width:280px;
+      height:210px;
+      background:
+        linear-gradient(0deg,#2667ff 0 26%,transparent 26% 34%,#ff4fa3 34% 60%,transparent 60% 68%,#7a45ff 68% 100%);
+      border-radius:18px 18px 12px 12px;
+      transform:rotate(-6deg);
+      box-shadow:0 20px 50px rgba(91,44,255,.18);
+      opacity:.82;
+    }
+
+    .hero::after{
+      content:"";
+      position:absolute;
+      right:-22px;
+      bottom:-12px;
+      width:280px;
+      height:210px;
+      background:
+        linear-gradient(0deg,#ffb632 0 28%,transparent 28% 36%,#ff4fa3 36% 62%,transparent 62% 70%,#2667ff 70% 100%);
+      border-radius:18px 18px 12px 12px;
+      transform:rotate(6deg);
+      box-shadow:0 20px 50px rgba(233,30,99,.16);
+      opacity:.82;
+    }
+
+    .decor{
+      position:absolute;
+      pointer-events:none;
+      z-index:0;
+    }
+
+    .lapiz{
+      width:135px;
+      height:22px;
+      border-radius:14px;
+      background:linear-gradient(90deg,#6b44ff 0 15%,#f5d67d 15% 28%,#ffca3a 28% 83%,#f6f0d0 83% 92%,#3e2d29 92% 100%);
+      box-shadow:0 10px 22px rgba(0,0,0,.10);
+    }
+
+    .lapiz.rosa{
+      background:linear-gradient(90deg,#6b44ff 0 15%,#f5d67d 15% 28%,#ff5aad 28% 83%,#f6f0d0 83% 92%,#3e2d29 92% 100%);
+    }
+
+    .lapiz.azul{
+      background:linear-gradient(90deg,#ff5aad 0 15%,#f5d67d 15% 28%,#6b44ff 28% 83%,#f6f0d0 83% 92%,#3e2d29 92% 100%);
+    }
+
+    .d1{left:62px;top:58px;transform:rotate(55deg)}
+    .d2{left:225px;top:85px;transform:rotate(-50deg)}
+    .d3{left:290px;bottom:82px;transform:rotate(22deg)}
+    .d4{right:260px;top:115px;transform:rotate(54deg)}
+    .d5{right:56px;top:80px;transform:rotate(-58deg)}
+    .d6{right:300px;bottom:70px;transform:rotate(-25deg)}
+
+    .punto{
+      width:18px;
+      height:18px;
+      border-radius:50%;
+      background:#ff5aad;
+      opacity:.75;
+    }
+
+    .p1{left:16%;top:26%}
+    .p2{left:36%;bottom:22%;background:#9b7cff}
+    .p3{right:25%;top:25%;background:#ffd84d}
+    .p4{right:13%;top:32%}
+    .p5{left:19%;bottom:32%}
+
+    .hero-content{
+      position:relative;
+      z-index:1;
+      max-width:880px;
+      margin:auto;
     }
 
     .hero h1{
-      font-size:44px;
-      margin-bottom:14px;
-      color:#26144d;
+      font-size:46px;
+      margin-bottom:16px;
+      color:var(--azul-oscuro);
+      letter-spacing:-1px;
     }
 
     .hero p{
@@ -67,7 +162,7 @@
       margin:auto;
       font-size:18px;
       line-height:1.6;
-      color:#555;
+      color:#333a55;
     }
 
     .search-box{
@@ -78,7 +173,7 @@
       background:white;
       padding:10px;
       border-radius:18px;
-      box-shadow:0 10px 28px rgba(0,0,0,.08);
+      box-shadow:0 14px 36px rgba(0,0,0,.10);
     }
 
     .search-box input{
@@ -91,16 +186,17 @@
 
     .search-box button{
       border:none;
-      background:#25d366;
+      background:var(--verde);
       color:white;
       font-weight:900;
-      padding:0 22px;
+      padding:0 24px;
       border-radius:14px;
       cursor:pointer;
+      box-shadow:0 8px 18px rgba(37,211,102,.22);
     }
 
     .categorias{
-      padding:32px 6% 10px;
+      padding:42px 6% 16px;
       display:flex;
       gap:12px;
       flex-wrap:wrap;
@@ -110,7 +206,7 @@
     .cat-btn{
       border:none;
       background:white;
-      color:#333;
+      color:#222a44;
       padding:12px 18px;
       border-radius:999px;
       font-weight:900;
@@ -119,15 +215,31 @@
     }
 
     .cat-btn.active{
-      background:#5b2cff;
+      background:var(--morado);
       color:white;
     }
 
+    .titulo-catalogo{
+      text-align:center;
+      color:var(--azul-oscuro);
+      font-size:26px;
+      margin:22px 6% 8px;
+      font-weight:900;
+    }
+
+    .linea{
+      width:58px;
+      height:4px;
+      border-radius:99px;
+      background:linear-gradient(90deg,var(--rosado),var(--morado));
+      margin:0 auto 30px;
+    }
+
     .catalogo{
-      padding:30px 6% 70px;
+      padding:0 1cm 76px;
       display:grid;
-      grid-template-columns:repeat(3, 1fr);
-      gap:24px;
+      grid-template-columns:repeat(3, minmax(0,1fr));
+      gap:1cm;
       max-width:1180px;
       margin:auto;
     }
@@ -136,10 +248,11 @@
       background:white;
       border-radius:22px;
       overflow:hidden;
-      box-shadow:0 12px 30px rgba(0,0,0,.08);
+      box-shadow:0 14px 34px rgba(0,0,0,.08);
       display:flex;
       flex-direction:column;
       min-height:430px;
+      border:1px solid rgba(91,44,255,.06);
     }
 
     .producto-img{
@@ -156,7 +269,7 @@
       width:100%;
       height:100%;
       object-fit:contain;
-      padding:12px;
+      padding:14px;
     }
 
     .sin-img{
@@ -166,43 +279,46 @@
     }
 
     .producto-body{
-      padding:18px;
+      padding:20px;
       flex:1;
       display:flex;
       flex-direction:column;
+      text-align:center;
     }
 
     .producto-body h3{
       font-size:17px;
       margin-bottom:8px;
-      color:#222;
+      color:#11163b;
       line-height:1.3;
+      min-height:44px;
     }
 
     .marca{
-      font-size:13px;
-      color:#777;
+      font-size:14px;
+      color:#66708a;
       margin-bottom:10px;
-      min-height:16px;
+      min-height:18px;
     }
 
     .precio{
       font-size:24px;
       font-weight:900;
-      color:#e91e63;
-      margin-bottom:14px;
+      color:var(--rosado);
+      margin-bottom:16px;
     }
 
     .whatsapp-btn{
       margin-top:auto;
       display:block;
       text-align:center;
-      background:#25d366;
+      background:var(--verde);
       color:white;
       text-decoration:none;
       font-weight:900;
       padding:13px;
       border-radius:14px;
+      box-shadow:0 8px 18px rgba(37,211,102,.22);
     }
 
     .mensaje{
@@ -214,36 +330,37 @@
     }
 
     footer{
-      background:#151515;
+      background:#12123a;
       color:white;
       text-align:center;
-      padding:28px 6%;
+      padding:30px 6%;
     }
 
-    @media(max-width:950px){
+    footer span{color:#ffd84d}
+
+    @media(max-width:1000px){
+      .hero::before,.hero::after{opacity:.35}
       .catalogo{
-        grid-template-columns:repeat(2, 1fr);
+        grid-template-columns:repeat(2, minmax(0,1fr));
       }
     }
 
-    @media(max-width:600px){
+    @media(max-width:700px){
+      header{padding:24px 5%}
+      .logo{font-size:25px}
+      .hero{padding:48px 5% 54px;min-height:auto}
       .hero h1{font-size:34px}
-
-      .search-box{
-        flex-direction:column;
-      }
-
-      .search-box button{
-        padding:14px;
-      }
-
+      .hero p{font-size:16px}
+      .search-box{flex-direction:column}
+      .search-box button{padding:14px}
       .catalogo{
+        padding:0 18px 60px;
         grid-template-columns:1fr;
+        gap:24px;
       }
-
-      .producto-img{
-        height:230px;
-      }
+      .producto-img{height:230px}
+      .decor{display:none}
+      .hero::before,.hero::after{display:none}
     }
   </style>
 </head>
@@ -258,15 +375,29 @@
 </header>
 
 <section class="hero">
-  <h1>Librería y Papelería</h1>
-  <p>
-    Útiles escolares, artículos de escritorio, cuadernos, lápices, carpetas,
-    marcadores, papelería y productos de oficina disponibles en Punta Arenas.
-  </p>
+  <div class="decor lapiz d1"></div>
+  <div class="decor lapiz rosa d2"></div>
+  <div class="decor lapiz azul d3"></div>
+  <div class="decor lapiz d4"></div>
+  <div class="decor lapiz rosa d5"></div>
+  <div class="decor lapiz azul d6"></div>
+  <div class="decor punto p1"></div>
+  <div class="decor punto p2"></div>
+  <div class="decor punto p3"></div>
+  <div class="decor punto p4"></div>
+  <div class="decor punto p5"></div>
 
-  <div class="search-box">
-    <input id="buscador" type="text" placeholder="Buscar cuadernos, lápices, carpetas...">
-    <button onclick="filtrarProductos()">Buscar</button>
+  <div class="hero-content">
+    <h1>Librería y Papelería</h1>
+    <p>
+      Útiles escolares, artículos de escritorio, cuadernos, lápices, carpetas,
+      marcadores, papelería y productos de oficina disponibles en Punta Arenas.
+    </p>
+
+    <div class="search-box">
+      <input id="buscador" type="text" placeholder="Buscar cuadernos, lápices, carpetas...">
+      <button onclick="filtrarProductos()">Buscar</button>
+    </div>
   </div>
 </section>
 
@@ -280,10 +411,13 @@
   <button class="cat-btn" onclick="filtrarCategoria('oficina', this)">Oficina</button>
 </div>
 
+<h2 class="titulo-catalogo">Catálogo de productos</h2>
+<div class="linea"></div>
+
 <section class="catalogo" id="catalogo"></section>
 
 <footer>
-  <p><strong>CumplePatagonia</strong></p>
+  <p><strong>Cumple<span>Patagonia</span></strong></p>
   <p>Librería · Papelería · Punta Arenas</p>
 </footer>
 
@@ -408,3 +542,4 @@ cargarProductos();
 
 </body>
 </html>
+
